@@ -1,0 +1,213 @@
+" Preamble {
+
+	" vim: set foldmarker={,} foldlevel=0 foldmethod=marker spell:
+
+" }
+
+" Pre-Pathogen {
+
+	" Disable vi compatibility
+	set nocompatible
+
+	" Plugins {
+
+		" Pathogen {
+
+			let g:pathogen_disabled = []
+
+			" Disable buftabs until it works correctly with powerline
+			call add(g:pathogen_disabled, "buftabs")
+
+			" Disable CSApprox until workaround for MobaXterm gnome-terminal
+			call add(g:pathogen_disabled, "CSApprox")
+
+		" }
+	" }
+" }
+
+" Load Pathogen {
+
+	call pathogen#helptags()
+	call pathogen#infect()
+	filetype off
+	syntax on
+	filetype plugin indent on
+
+" }
+
+" Post-Pathogen {
+
+	" Allow deleting of any character with backspace
+	set backspace=indent,eol,start
+
+	" Do not wrap long lines
+	set nowrap
+
+	" Enable mouse when running in terminal
+	set mouse=a
+
+	" Disable spell check
+	set nospell
+
+	" Enable syntax highlighting
+	syntax enable
+	
+	" Do not automatically backup files 
+	set nobackup
+
+	" Indent (outdent) 4 columns for >> (<<)
+	set shiftwidth=4
+	
+	" Display tabs 4 spaces wide
+	set tabstop=4
+
+	" Expand tabs to spaces
+	set expandtab
+
+	" Show line numbers
+	set number
+
+	" Use incremental search for /
+	set incsearch
+
+	" Highlight search teams
+	set hlsearch
+
+	" Use Windows-compatible shortcuts
+	"source $VIMRUNTIME/mswin.vim
+	"behave mswin
+
+	" Open horizontal splits below current split
+	set splitbelow
+
+	" Open vertical splits to the right of current split
+	set splitright
+
+	set laststatus=2
+	set guioptions-=T
+	set guioptions-=m
+	set hidden
+
+	" Resize splits on window resize
+	autocmd VimResized * wincmd =
+
+	" Color scheme
+	set t_Co=16
+	set background=dark
+	colorscheme ir_black
+
+    " Map Alt- to the same behavior in vim and gvim
+    let c='a'
+    while c <= 'z'
+        exec "set <A-".c.">=\e".c
+        exec "imap \e".c." <A-".c.">"
+        let c = nr2char(1+char2nr(c))
+    endw
+
+	" Movement {
+
+		" Cycle buffers in current split
+		noremap <f1> :bprev<CR>
+		noremap <f2> :bnext<CR>
+		noremap <a-left> :bprev<CR>
+		noremap <a-right> :bnext<CR>
+
+		" Splits
+		noremap <c-h> <C-w>h
+		noremap <c-j> <C-w>j
+		noremap <c-k> <C-w>k
+		noremap <c-l> <C-w>l
+
+        " Scroll window
+        noremap <a-j> 3<c-e>3j
+        noremap <a-k> 3<c-y>3k
+        noremap <a-l> 3zl3l
+        noremap <a-h> 3zh3h
+
+        " Scroll page
+        noremap <a-J> <c-f>
+        noremap <a-K> <c-b>
+        noremap <a-L> zL
+        noremap <a-H> zH
+
+
+	" }
+
+	" Plugins {
+
+		" Supertab {
+
+			au FileType python set omnifunc=pythoncomplete#Complete
+			let g:SuperTabDefaultCompletionType = "context"
+            set completeopt=menuone,longest
+
+		" }
+
+		" Nerd Tree {
+
+			map <leader>n :NERDTreeToggle<CR> | set guioptions-=L
+
+		" }
+
+		" Buftabs {
+		
+			let g:buftabs_in_statusline=1
+			let g:buftabs_only_basename=1
+			let g:buftabs_active_highlight_group="Visual"
+
+		" }
+
+		" SQLUtilities {
+
+			let g:sqlutil_align_comma=1
+
+		" }
+
+		" Powerline {
+
+			" Use theme colors
+			"let g:Powerline_theme="skwp"
+			"let g:Powerline_colorscheme="skwp"
+			let g:Powerline_symbols = 'fancy'
+
+		" }
+
+		" MiniBufExplorer {
+
+			" Show buffer list at top of screen
+			let g:miniBufExplSplitBelow=0
+
+			" Show buffer list even if only one buffer is open
+			let g:miniBufExplorerMoreThanOne=0
+			
+			" Do not show numbers in buffer list
+			let g:miniBufExplShowBufNumbers=0
+
+		" }
+ 
+        " TagList {
+
+            " Show all buffers in TagList
+            let Tlist_Show_One_File=0
+
+            " Hide fold indicators
+            let Tlist_Enable_Fold_Column=0
+
+            " Appear on left
+            let Tlist_Use_Right_Window=0
+            
+            " Open with <leader>l
+			map <leader>l :TlistToggle<CR>
+
+        " }
+
+        " CursorLienCurrentWindow {
+        
+            set cursorline
+
+        " }
+	" }
+" }
+
+let python_highlight_all = 1
+

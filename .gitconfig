@@ -1,0 +1,7 @@
+[user]
+	name = CS
+	email = cs@wahdis.com
+[diff]
+	tool = gvimdiff
+[core]
+	filemode = false
