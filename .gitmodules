@@ -55,3 +55,9 @@
 [submodule ".vim/bundle/vim-colors-solarized"]
 	path = .vim/bundle/vim-colors-solarized
 	url = git@github.com:altercation/vim-colors-solarized
+[submodule ".fonts/ubuntu-mono-powerline"]
+	path = .fonts/ubuntu-mono-powerline
+	url = git@github.com:scotu/ubuntu-mono-powerline
+[submodule ".fonts/ubuntu-mono-powerline-ttf"]
+	path = .fonts/ubuntu-mono-powerline-ttf
+	url = git@github.com:pdf/ubuntu-mono-powerline-ttf

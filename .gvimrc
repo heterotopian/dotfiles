@@ -6,8 +6,7 @@ set columns=100
 if has('win32')
 	set guifont=Lucida_Console:h10	
 else
-    "set guifont=Consolas\ 11
-	set guifont=Ubuntu\ Mono\ 11
+	set guifont=Ubuntu\ Mono\ for\ Powerline\ 11
 endif
 
 " Maximize if in diff mode
