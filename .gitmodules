@@ -10,9 +10,6 @@
 [submodule ".vim/bundle/CSApprox"]
 	path = .vim/bundle/CSApprox
 	url = git@github.com:vim-scripts/CSApprox
-[submodule ".vim/bundle/solarized"]
-	path = .vim/bundle/solarized
-	url = git@github.com:altercation/solarized
 [submodule ".vim/bundle/MultipleSearch"]
 	path = .vim/bundle/MultipleSearch
 	url = git@github.com:vim-scripts/MultipleSearch
@@ -55,3 +52,6 @@
 [submodule ".vim/bundle/Conque-Shell"]
 	path = .vim/bundle/Conque-Shell
 	url = git@github.com:heterotopian/Conque-Shell
+[submodule ".vim/bundle/vim-colors-solarized"]
+	path = .vim/bundle/vim-colors-solarized
+	url = git@github.com:altercation/vim-colors-solarized
