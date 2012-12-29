@@ -1,10 +1,7 @@
-" Preamble {
-
-	" vim: set foldmarker={,} foldlevel=0 foldmethod=marker spell:
-
-" }
-
 " Pre-Pathogen {
+
+    " Load Pathogen from non-standard location
+    runtime bundle/vim-pathogen/autoload/pathogen.vim
 
 	" Disable vi compatibility
 	set nocompatible
@@ -103,6 +100,9 @@
         exec "imap \e".c." <A-".c.">"
         let c = nr2char(1+char2nr(c))
     endw
+
+    " Maximize Python syntax highlighting
+    let python_highlight_all = 1
 
 	" Movement {
 
@@ -209,5 +209,4 @@
 	" }
 " }
 
-let python_highlight_all = 1
 
