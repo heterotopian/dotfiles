@@ -1,0 +1,57 @@
+[submodule ".vim/bundle/vim-pathogen"]
+	path = .vim/bundle/vim-pathogen
+	url = git@github.com:tpope/vim-pathogen
+[submodule ".vim/bundle/supertab"]
+	path = .vim/bundle/supertab
+	url = git@github.com:ervandew/supertab
+[submodule ".vim/bundle/buftabs"]
+	path = .vim/bundle/buftabs
+	url = git@github.com:vim-scripts/buftabs
+[submodule ".vim/bundle/CSApprox"]
+	path = .vim/bundle/CSApprox
+	url = git@github.com:vim-scripts/CSApprox
+[submodule ".vim/bundle/solarized"]
+	path = .vim/bundle/solarized
+	url = git@github.com:altercation/solarized
+[submodule ".vim/bundle/MultipleSearch"]
+	path = .vim/bundle/MultipleSearch
+	url = git@github.com:vim-scripts/MultipleSearch
+[submodule ".vim/bundle/xmledit"]
+	path = .vim/bundle/xmledit
+	url = git@github.com:sukima/xmledit
+[submodule ".vim/bundle/SQLUtilities"]
+	path = .vim/bundle/SQLUtilities
+	url = git@github.com:vim-scripts/SQLUtilities
+[submodule ".vim/bundle/Align"]
+	path = .vim/bundle/Align
+	url = git@github.com:vim-scripts/Align
+[submodule ".vim/bundle/nerdtree"]
+	path = .vim/bundle/nerdtree
+	url = git@github.com:scrooloose/nerdtree
+[submodule ".vim/bundle/tomorrow-theme"]
+	path = .vim/bundle/tomorrow-theme
+	url = git@github.com:chriskempson/tomorrow-theme
+[submodule ".vim/bundle/vim-powerline"]
+	path = .vim/bundle/vim-powerline
+	url = git@github.com:Lokaltog/vim-powerline
+[submodule ".vim/bundle/minibufexpl.vim"]
+	path = .vim/bundle/minibufexpl.vim
+	url = git@github.com:fholgado/minibufexpl.vim
+[submodule ".vim/bundle/bufkill.vim"]
+	path = .vim/bundle/bufkill.vim
+	url = git@github.com:/vim-scripts/bufkill.vim
+[submodule ".vim/bundle/taglist.vim"]
+	path = .vim/bundle/taglist.vim
+	url = git@github.com:vim-scripts/taglist.vim
+[submodule ".vim/bundle/CursorLineCurrentWindow"]
+	path = .vim/bundle/CursorLineCurrentWindow
+	url = git@github.com:vim-scripts/CursorLineCurrentWindow
+[submodule ".vim/bundle/Command-T"]
+	path = .vim/bundle/Command-T
+	url = git@github.com:wincent/Command-T
+[submodule ".vim/bundle/ctrlp.vim"]
+	path = .vim/bundle/ctrlp.vim
+	url = git@github.com:kien/ctrlp.vim
+[submodule ".vim/bundle/Conque-Shell"]
+	path = .vim/bundle/Conque-Shell
+	url = git@github.com:heterotopian/Conque-Shell
