@@ -110,6 +110,10 @@ fi
 
 # End copy from Ubuntu 12.04 default
 
+if [ -f /etc/bashrc ]; then
+    . /etc/bashrc
+fi
+
 # Use vim as readline editor
 export editor=vim
 set -o vi
