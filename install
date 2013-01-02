@@ -2,7 +2,7 @@
 shopt -s extglob
 shopt -s dotglob
 DESTINATION=${DESTINATION-$HOME}
-for file in !(*README*|.git|.gitmodules|install|*.swp); do
+for file in home/!(*.swp); do
     echo Linking ${file}
     ln -sf `readlink -f ${file}` ${DESTINATION}
 done
