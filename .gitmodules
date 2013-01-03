@@ -61,3 +61,6 @@
 [submodule ".fonts/ubuntu-mono-powerline-ttf"]
 	path = .fonts/ubuntu-mono-powerline-ttf
 	url = git@github.com:pdf/ubuntu-mono-powerline-ttf
+[submodule "home/.vim/bundle/vim-bundle-mako"]
+	path = home/.vim/bundle/vim-bundle-mako
+	url = git@github.com:sophacles/vim-bundle-mako
