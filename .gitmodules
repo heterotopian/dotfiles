@@ -1,65 +1,65 @@
-[submodule ".vim/bundle/vim-pathogen"]
-	path = .vim/bundle/vim-pathogen
+[submodule "home/.vim/bundle/vim-pathogen"]
+	path = home/.vim/bundle/vim-pathogen
 	url = git@github.com:tpope/vim-pathogen
-[submodule ".vim/bundle/supertab"]
-	path = .vim/bundle/supertab
+[submodule "home/.vim/bundle/supertab"]
+	path = home/.vim/bundle/supertab
 	url = git@github.com:ervandew/supertab
-[submodule ".vim/bundle/buftabs"]
-	path = .vim/bundle/buftabs
+[submodule "home/.vim/bundle/buftabs"]
+	path = home/.vim/bundle/buftabs
 	url = git@github.com:vim-scripts/buftabs
-[submodule ".vim/bundle/CSApprox"]
-	path = .vim/bundle/CSApprox
+[submodule "home/.vim/bundle/CSApprox"]
+	path = home/.vim/bundle/CSApprox
 	url = git@github.com:vim-scripts/CSApprox
-[submodule ".vim/bundle/MultipleSearch"]
-	path = .vim/bundle/MultipleSearch
+[submodule "home/.vim/bundle/MultipleSearch"]
+	path = home/.vim/bundle/MultipleSearch
 	url = git@github.com:vim-scripts/MultipleSearch
-[submodule ".vim/bundle/xmledit"]
-	path = .vim/bundle/xmledit
+[submodule "home/.vim/bundle/xmledit"]
+	path = home/.vim/bundle/xmledit
 	url = git@github.com:sukima/xmledit
-[submodule ".vim/bundle/SQLUtilities"]
-	path = .vim/bundle/SQLUtilities
+[submodule "home/.vim/bundle/SQLUtilities"]
+	path = home/.vim/bundle/SQLUtilities
 	url = git@github.com:vim-scripts/SQLUtilities
-[submodule ".vim/bundle/Align"]
-	path = .vim/bundle/Align
+[submodule "home/.vim/bundle/Align"]
+	path = home/.vim/bundle/Align
 	url = git@github.com:vim-scripts/Align
-[submodule ".vim/bundle/nerdtree"]
-	path = .vim/bundle/nerdtree
+[submodule "home/.vim/bundle/nerdtree"]
+	path = home/.vim/bundle/nerdtree
 	url = git@github.com:scrooloose/nerdtree
-[submodule ".vim/bundle/tomorrow-theme"]
-	path = .vim/bundle/tomorrow-theme
+[submodule "home/.vim/bundle/tomorrow-theme"]
+	path = home/.vim/bundle/tomorrow-theme
 	url = git@github.com:chriskempson/tomorrow-theme
-[submodule ".vim/bundle/vim-powerline"]
-	path = .vim/bundle/vim-powerline
+[submodule "home/.vim/bundle/vim-powerline"]
+	path = home/.vim/bundle/vim-powerline
 	url = git@github.com:Lokaltog/vim-powerline
-[submodule ".vim/bundle/minibufexpl.vim"]
-	path = .vim/bundle/minibufexpl.vim
+[submodule "home/.vim/bundle/minibufexpl.vim"]
+	path = home/.vim/bundle/minibufexpl.vim
 	url = git@github.com:fholgado/minibufexpl.vim
-[submodule ".vim/bundle/bufkill.vim"]
-	path = .vim/bundle/bufkill.vim
+[submodule "home/.vim/bundle/bufkill.vim"]
+	path = home/.vim/bundle/bufkill.vim
 	url = git@github.com:/vim-scripts/bufkill.vim
-[submodule ".vim/bundle/taglist.vim"]
-	path = .vim/bundle/taglist.vim
+[submodule "home/.vim/bundle/taglist.vim"]
+	path = home/.vim/bundle/taglist.vim
 	url = git@github.com:vim-scripts/taglist.vim
-[submodule ".vim/bundle/CursorLineCurrentWindow"]
-	path = .vim/bundle/CursorLineCurrentWindow
+[submodule "home/.vim/bundle/CursorLineCurrentWindow"]
+	path = home/.vim/bundle/CursorLineCurrentWindow
 	url = git@github.com:vim-scripts/CursorLineCurrentWindow
-[submodule ".vim/bundle/Command-T"]
-	path = .vim/bundle/Command-T
+[submodule "home/.vim/bundle/Command-T"]
+	path = home/.vim/bundle/Command-T
 	url = git@github.com:wincent/Command-T
-[submodule ".vim/bundle/ctrlp.vim"]
-	path = .vim/bundle/ctrlp.vim
+[submodule "home/.vim/bundle/ctrlp.vim"]
+	path = home/.vim/bundle/ctrlp.vim
 	url = git@github.com:kien/ctrlp.vim
-[submodule ".vim/bundle/Conque-Shell"]
-	path = .vim/bundle/Conque-Shell
+[submodule "home/.vim/bundle/Conque-Shell"]
+	path = home/.vim/bundle/Conque-Shell
 	url = git@github.com:heterotopian/Conque-Shell
-[submodule ".vim/bundle/vim-colors-solarized"]
-	path = .vim/bundle/vim-colors-solarized
+[submodule "home/.vim/bundle/vim-colors-solarized"]
+	path = home/.vim/bundle/vim-colors-solarized
 	url = git@github.com:altercation/vim-colors-solarized
-[submodule ".fonts/ubuntu-mono-powerline"]
-	path = .fonts/ubuntu-mono-powerline
+[submodule "home/.fonts/ubuntu-mono-powerline"]
+	path = home/.fonts/ubuntu-mono-powerline
 	url = git@github.com:scotu/ubuntu-mono-powerline
-[submodule ".fonts/ubuntu-mono-powerline-ttf"]
-	path = .fonts/ubuntu-mono-powerline-ttf
+[submodule "home/.fonts/ubuntu-mono-powerline-ttf"]
+	path = home/.fonts/ubuntu-mono-powerline-ttf
 	url = git@github.com:pdf/ubuntu-mono-powerline-ttf
 [submodule "home/.vim/bundle/vim-bundle-mako"]
 	path = home/.vim/bundle/vim-bundle-mako
