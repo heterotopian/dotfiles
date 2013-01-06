@@ -1,4 +1,4 @@
-" Pre-Pathogen {
+" Pre-Pathogen infect {
 
     " Load Pathogen from non-standard location
     runtime bundle/vim-pathogen/autoload/pathogen.vim
@@ -6,20 +6,17 @@
 	" Disable vi compatibility
 	set nocompatible
 
-	" Plugins {
+    " Pathogen {
 
-		" Pathogen {
+        let g:pathogen_disabled = []
 
-			let g:pathogen_disabled = []
+        " Disable buftabs until it works correctly with powerline
+        call add(g:pathogen_disabled, "buftabs")
 
-			" Disable buftabs until it works correctly with powerline
-			call add(g:pathogen_disabled, "buftabs")
+        " Disable CSApprox until workaround for MobaXterm gnome-terminal
+        call add(g:pathogen_disabled, "CSApprox")
 
-			" Disable CSApprox until workaround for MobaXterm gnome-terminal
-			call add(g:pathogen_disabled, "CSApprox")
-
-		" }
-	" }
+    " }
 " }
 
 " Load Pathogen {
@@ -32,7 +29,7 @@
 
 " }
 
-" Post-Pathogen {
+" Post-Pathogen infect {
 
 	" Allow deleting of any character with backspace
 	set backspace=indent,eol,start
@@ -70,10 +67,6 @@
 	" Highlight search teams
 	set hlsearch
 
-	" Use Windows-compatible shortcuts
-	"source $VIMRUNTIME/mswin.vim
-	"behave mswin
-
 	" Open horizontal splits below current split
 	set splitbelow
 
@@ -104,109 +97,107 @@
     " Maximize Python syntax highlighting
     let python_highlight_all = 1
 
-	" Movement {
+	" Movement
+    " Cycle buffers in current split
+    noremap <f1> :bprev<CR>
+    noremap <f2> :bnext<CR>
+    noremap <a-left> :bprev<CR>
+    noremap <a-right> :bnext<CR>
 
-		" Cycle buffers in current split
-		noremap <f1> :bprev<CR>
-		noremap <f2> :bnext<CR>
-		noremap <a-left> :bprev<CR>
-		noremap <a-right> :bnext<CR>
+    " Splits
+    noremap <c-h> <C-w>h
+    noremap <c-j> <C-w>j
+    noremap <c-k> <C-w>k
+    noremap <c-l> <C-w>l
 
-		" Splits
-		noremap <c-h> <C-w>h
-		noremap <c-j> <C-w>j
-		noremap <c-k> <C-w>k
-		noremap <c-l> <C-w>l
+    " Scroll window
+    noremap <a-j> 3<c-e>3j
+    noremap <a-k> 3<c-y>3k
+    noremap <a-l> 3zl3l
+    noremap <a-h> 3zh3h
 
-        " Scroll window
-        noremap <a-j> 3<c-e>3j
-        noremap <a-k> 3<c-y>3k
-        noremap <a-l> 3zl3l
-        noremap <a-h> 3zh3h
+    " Scroll page
+    noremap <a-J> <c-f>
+    noremap <a-K> <c-b>
+    noremap <a-L> zL
+    noremap <a-H> zH
 
-        " Scroll page
-        noremap <a-J> <c-f>
-        noremap <a-K> <c-b>
-        noremap <a-L> zL
-        noremap <a-H> zH
+    " Supertab {
 
+        au FileType python set omnifunc=pythoncomplete#Complete
+        let g:SuperTabDefaultCompletionType = "context"
+        set completeopt=menuone,longest
 
-	" }
+    " }
 
-	" Plugins {
+    " Nerd Tree {
 
-		" Supertab {
+        map <leader>n :NERDTreeToggle<CR> | set guioptions-=L
 
-			au FileType python set omnifunc=pythoncomplete#Complete
-			let g:SuperTabDefaultCompletionType = "context"
-            set completeopt=menuone,longest
+    " }
 
-		" }
+    " Buftabs {
+    
+        let g:buftabs_in_statusline=1
+        let g:buftabs_only_basename=1
+        let g:buftabs_active_highlight_group="Visual"
 
-		" Nerd Tree {
+    " }
 
-			map <leader>n :NERDTreeToggle<CR> | set guioptions-=L
+    " SQLUtilities {
 
-		" }
+        let g:sqlutil_align_comma=1
 
-		" Buftabs {
-		
-			let g:buftabs_in_statusline=1
-			let g:buftabs_only_basename=1
-			let g:buftabs_active_highlight_group="Visual"
+    " }
 
-		" }
+    " Powerline {
 
-		" SQLUtilities {
+        " Use theme colors
+        "let g:Powerline_theme="skwp"
+        "let g:Powerline_colorscheme="skwp"
+        let g:Powerline_symbols = 'fancy'
 
-			let g:sqlutil_align_comma=1
+    " }
 
-		" }
+    " MiniBufExplorer {
 
-		" Powerline {
+        " Show buffer list at top of screen
+        let g:miniBufExplSplitBelow=0
 
-			" Use theme colors
-			"let g:Powerline_theme="skwp"
-			"let g:Powerline_colorscheme="skwp"
-			let g:Powerline_symbols = 'fancy'
-
-		" }
-
-		" MiniBufExplorer {
-
-			" Show buffer list at top of screen
-			let g:miniBufExplSplitBelow=0
-
-			" Show buffer list even if only one buffer is open
-			let g:miniBufExplorerMoreThanOne=0
-			
-			" Do not show numbers in buffer list
-			let g:miniBufExplShowBufNumbers=0
-
-		" }
- 
-        " TagList {
-
-            " Show all buffers in TagList
-            let Tlist_Show_One_File=0
-
-            " Hide fold indicators
-            let Tlist_Enable_Fold_Column=0
-
-            " Appear on left
-            let Tlist_Use_Right_Window=0
-            
-            " Open with <leader>l
-			map <leader>l :TlistToggle<CR>
-
-        " }
-
-        " CursorLienCurrentWindow {
+        " Show buffer list even if only one buffer is open
+        let g:miniBufExplorerMoreThanOne=0
         
-            set cursorline
+        " Do not show numbers in buffer list
+        let g:miniBufExplShowBufNumbers=0
 
-        " }
-	" }
+    " }
+
+    " TagList {
+
+        " Show all buffers in TagList
+        let Tlist_Show_One_File=0
+
+        " Hide fold indicators
+        let Tlist_Enable_Fold_Column=0
+
+        " Appear on left
+        let Tlist_Use_Right_Window=0
+        
+        " Open with <leader>l
+        map <leader>l :TlistToggle<CR>
+
+    " }
+
+    " CursorLienCurrentWindow {
+    
+        set cursorline
+
+    " }
+
+    " Source ~/.vimrc.local if it exists
+    if filereadable($HOME."/.vimrc.local")
+        source $HOME/.vimrc.local
+    endif
+
 " }
-
 
