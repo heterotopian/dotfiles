@@ -16,6 +16,11 @@
         " Disable CSApprox until workaround for MobaXterm gnome-terminal
         call add(g:pathogen_disabled, "CSApprox")
 
+        " Disable buftabs in diff mode
+        if &diff
+            call add(g:pathogen_disabled, "minibufexpl.vim")
+        endif
+
     " }
 " }
 
