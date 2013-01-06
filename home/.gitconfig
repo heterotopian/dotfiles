@@ -5,4 +5,4 @@
 	tool = gvimdiff
 [core]
 	filemode = false
-	excludesfile = /home/cstevens/.gitignore_global
+	excludesfile = ~/.gitignore_global
