@@ -120,8 +120,9 @@ set -o vi
 
 # Misc command shortcuts
 alias ls='ls --color=tty'
-alias la='ls -la --color=tty'
-alias ll='ls -l --color=tty'
+alias la='ls -a'
+alias ll='ls -l'
+alias lla='ls -la'
 alias l='unified_look'
 alias grep='grep --color'
 alias igrep='grep --color -i'
