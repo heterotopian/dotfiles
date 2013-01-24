@@ -4,9 +4,6 @@
 [submodule "home/.vim/bundle/supertab"]
 	path = home/.vim/bundle/supertab
 	url = git@github.com:ervandew/supertab
-[submodule "home/.vim/bundle/buftabs"]
-	path = home/.vim/bundle/buftabs
-	url = git@github.com:vim-scripts/buftabs
 [submodule "home/.vim/bundle/CSApprox"]
 	path = home/.vim/bundle/CSApprox
 	url = git@github.com:vim-scripts/CSApprox

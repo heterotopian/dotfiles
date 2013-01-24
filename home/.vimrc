@@ -10,13 +10,10 @@
 
         let g:pathogen_disabled = []
 
-        " Disable buftabs until it works correctly with powerline
-        call add(g:pathogen_disabled, "buftabs")
-
         " Disable CSApprox until workaround for MobaXterm gnome-terminal
         call add(g:pathogen_disabled, "CSApprox")
 
-        " Disable buftabs in diff mode
+        " Disable MiniBufExplorer in diff mode
         if &diff
             call add(g:pathogen_disabled, "minibufexpl.vim")
         endif
@@ -144,14 +141,6 @@
     " Nerd Tree {
 
         map <leader>n :NERDTreeToggle<CR> | set guioptions-=L
-
-    " }
-
-    " Buftabs {
-    
-        let g:buftabs_in_statusline=1
-        let g:buftabs_only_basename=1
-        let g:buftabs_active_highlight_group="Visual"
 
     " }
 
