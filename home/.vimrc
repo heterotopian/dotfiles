@@ -75,11 +75,14 @@
 	" Open vertical splits to the right of current split
 	set splitright
 
-    " Shortcut for :split
+    " Open horizontal split
     noremap <leader>h :split<CR>
 
-    " Shortcut for :vsplit
+    " Open vertical split
     noremap <leader>v :vsplit<CR>
+
+    " Close active split
+    noremap <leader>c :close<CR>
 
 	set laststatus=2
 	set guioptions-=T
