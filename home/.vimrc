@@ -112,14 +112,18 @@
     " Cycle buffers in current split
     noremap <f1> :bprev<CR>
     noremap <f2> :bnext<CR>
-    noremap <a-left> :bprev<CR>
-    noremap <a-right> :bnext<CR>
+    imap <f1> <esc><f1>
+    imap <f2> <esc><f2>
 
     " Splits
     noremap <c-h> <C-w>h
     noremap <c-j> <C-w>j
     noremap <c-k> <C-w>k
     noremap <c-l> <C-w>l
+    imap <c-h> <esc><c-h>
+    imap <c-j> <esc><c-j>
+    imap <c-k> <esc><c-k>
+    imap <c-l> <esc><c-l>
 
     " Scroll window
     noremap <a-j> 3<c-e>3j
