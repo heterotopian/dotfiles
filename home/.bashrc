@@ -164,12 +164,6 @@ abspath() {
 	readlink -f "$1"
 }
 
-# Show running time in seconds using bash builtin
-wallseconds() {
-	TIMEFORMAT=%0R
-	{ time ${@} > /dev/null; } 2>&1
-} 
-
 # Prompt
 export PS1="\[\e[1;33m\]\u@\h\[\e[m\] \[\e[1;36m\]\w\[\e[m\] \$(parse_git_branch)$ "
 
