@@ -71,6 +71,11 @@ xterm*|rxvt*)
     ;;
 esac
 
+# Enable 256 color support in terminal
+if [ -n "$DISPLAY" -a "$TERM" == "xterm" ]; then
+    export TERM=xterm-256color
+fi
+
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
