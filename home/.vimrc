@@ -148,6 +148,8 @@
     " Nerd Tree {
 
         map <leader>n :NERDTreeToggle<CR> | set guioptions-=L
+        let NERDTreeIgnore = ['\~$', '\.pyc$']
+        let g:NERDTreeWinSize = 40
 
     " }
 
