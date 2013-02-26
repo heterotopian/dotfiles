@@ -137,6 +137,9 @@
     noremap <a-L> zL
     noremap <a-H> zH
 
+    " Ignore .pyc files
+    set wildignore+=*.pyc
+
     " Supertab {
 
         au FileType python set omnifunc=pythoncomplete#Complete
