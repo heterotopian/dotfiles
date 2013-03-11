@@ -60,6 +60,12 @@
 	" Expand tabs to spaces
 	set expandtab
 
+    " Block indent with Tab in visual mode
+    vmap <tab> >gv
+
+    " Block dedent with Shift-Tab in visual mode
+    vmap <s-tab> <gv
+
 	" Show line numbers
 	set number
 
