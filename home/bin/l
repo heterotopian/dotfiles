@@ -1,0 +1,11 @@
+#!/bin/bash
+LL="ls -l --color"
+if [ "${#}" -eq 0 ]; then
+    ls -l --color
+elif [ "${#}" -gt 1 ]; then
+    ls -l --color "${@}"
+elif [ -d "${1}" ]; then
+    ls -l --color "${1}"
+else
+    more "${1}"
+fi

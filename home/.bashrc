@@ -24,7 +24,6 @@ alias ls='ls --color=auto'
 alias la='ls -a'
 alias ll='ls -l'
 alias lla='ls -la'
-alias l='unified_look'
 alias grep='grep --color'
 alias igrep='grep -i --color=auto'
 alias grep='grep --color=auto'
@@ -35,19 +34,6 @@ alias egrep='egrep --color=auto'
 parse_git_branch() {
 	cur_branch=$(git branch --no-color 2> /dev/null | fgrep '*' | sed 's/* //')
 	[ ${#cur_branch} -gt 0 ] && echo "(git:$cur_branch) "
-}
-
-# Convenience function to replace ls and less/more
-unified_look() {
-	if [ $# -eq 0 ]; then
-		ll
-	elif [ $# -gt 1 ]; then
-		return
-	elif [ -d $1 ]; then
-		ll $1
-	else
-		more $1
-	fi
 }
 
 # Show all user processes matching regex
