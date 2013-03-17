@@ -111,6 +111,9 @@
         let c = nr2char(1+char2nr(c))
     endw
 
+    " Disable Esc key multimappings in insert mode
+    set noesckeys
+
     " Maximize Python syntax highlighting
     let python_highlight_all = 1
 
