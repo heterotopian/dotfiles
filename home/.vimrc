@@ -115,14 +115,14 @@
     set noesckeys
 
     " Maximize Python syntax highlighting
-    let python_highlight_all = 1
+    " let python_highlight_all = 1
 
 	" Movement
     " Cycle buffers in current split
-    noremap <f1> :bprev<CR>
-    noremap <f2> :bnext<CR>
-    imap <f1> <esc><f1>
-    imap <f2> <esc><f2>
+    nmap <f1> :bprev<CR>
+    nmap <f2> :bnext<CR>
+    imap <f1> <esc>:bprev<CR>
+    imap <f2> <esc>:bnext<CR>
 
     " Splits
     noremap <c-h> <C-w>h
