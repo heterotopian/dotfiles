@@ -23,8 +23,8 @@
 
 " Load Pathogen {
 
-	call pathogen#helptags()
 	call pathogen#infect()
+    Helptags
 	filetype off
 	syntax on
 	filetype plugin indent on
