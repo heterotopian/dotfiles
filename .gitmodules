@@ -64,3 +64,6 @@
 [submodule "home/.vim/bundle/VimClojure"]
 	path = home/.vim/bundle/VimClojure
 	url = git@github.com:vim-scripts/VimClojure
+[submodule "home/.vim/bundle/vim-surround"]
+	path = home/.vim/bundle/vim-surround
+	url = git@github.com:tpope/vim-surround
