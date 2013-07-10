@@ -98,6 +98,9 @@
 	" Resize splits on window resize
 	autocmd VimResized * wincmd =
 
+    " Suppress reload prompt when file mode changes
+    autocmd FileChangedShell * let v:fcs_choice = (v:fcs_reason == "mode") ? "" : "ask"
+
 	" Color scheme
 	set t_Co=16
 	set background=dark
