@@ -72,8 +72,11 @@
 	" Use incremental search for /
 	set incsearch
 
-	" Highlight search teams
+	" Highlight search
 	set hlsearch
+
+    " Toggle highlighting of most recent search
+    map <leader>H :nohlsearch<cr>
 
 	" Open horizontal splits below current split
 	set splitbelow
@@ -166,7 +169,29 @@
         let NERDTreeIgnore = ['\~$', '\.pyc$']
         let g:NERDTreeWinSize = 40
 
+        function! UpdateNERDTree(...)
+            let stay = 0
+
+            if(exists("a:1"))
+                let stay = a:1
+            end
+
+            if exists("t:NERDTreeBufName")
+                let nr = bufwinnr(t:NERDTreeBufName)
+                if nr != -1
+                    exe nr . "wincmd w"
+                    exe substitute(mapcheck("R"), "<CR>", "", "")
+                    if !stay
+                        wincmd p
+                    end
+                endif
+            endif
+        endfunction
+
     " }
+
+    " Refresh NERDTree and CtrlP
+    map <leader>r :call UpdateNERDTree()<cr>:CtrlPClearCache<cr>
 
     " SQLUtilities {
 
