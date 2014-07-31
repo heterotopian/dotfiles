@@ -53,6 +53,14 @@ abspath() {
 	readlink -f "$1"
 }
 
+# Arrange tmux windows
+tmux-even-horizontal() {
+    tmux list-windows -t 0 | cut -d: -f1 | xargs -I{} tmux select-layout -t0:{} even-horizontal
+}
+tmux-even-vertical() {
+    tmux list-windows -t 0 | cut -d: -f1 | xargs -I{} tmux select-layout -t0:{} even-vertical
+}
+
 # Prompt
 export PS1="\[\e[1;33m\]\u@\h\[\e[m\] \[\e[1;36m\]\w\[\e[m\] \$(parse_git_branch)$ "
 
