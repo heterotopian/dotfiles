@@ -1,75 +1,75 @@
 [submodule "home/.vim/bundle/vim-pathogen"]
 	path = home/.vim/bundle/vim-pathogen
-	url = git@github.com:tpope/vim-pathogen
+	url = http://github.com/tpope/vim-pathogen
 [submodule "home/.vim/bundle/supertab"]
 	path = home/.vim/bundle/supertab
-	url = git@github.com:ervandew/supertab
+	url = http://github.com/ervandew/supertab
 [submodule "home/.vim/bundle/CSApprox"]
 	path = home/.vim/bundle/CSApprox
-	url = git@github.com:vim-scripts/CSApprox
+	url = http://github.com/vim-scripts/CSApprox
 [submodule "home/.vim/bundle/MultipleSearch"]
 	path = home/.vim/bundle/MultipleSearch
-	url = git@github.com:vim-scripts/MultipleSearch
+	url = http://github.com/vim-scripts/MultipleSearch
 [submodule "home/.vim/bundle/xmledit"]
 	path = home/.vim/bundle/xmledit
-	url = git@github.com:sukima/xmledit
+	url = http://github.com/sukima/xmledit
 [submodule "home/.vim/bundle/SQLUtilities"]
 	path = home/.vim/bundle/SQLUtilities
-	url = git@github.com:vim-scripts/SQLUtilities
+	url = http://github.com/vim-scripts/SQLUtilities
 [submodule "home/.vim/bundle/Align"]
 	path = home/.vim/bundle/Align
-	url = git@github.com:vim-scripts/Align
+	url = http://github.com/vim-scripts/Align
 [submodule "home/.vim/bundle/nerdtree"]
 	path = home/.vim/bundle/nerdtree
-	url = git@github.com:scrooloose/nerdtree
+	url = http://github.com/scrooloose/nerdtree
 [submodule "home/.vim/bundle/tomorrow-theme"]
 	path = home/.vim/bundle/tomorrow-theme
-	url = git@github.com:chriskempson/tomorrow-theme
+	url = http://github.com/chriskempson/tomorrow-theme
 [submodule "home/.vim/bundle/vim-powerline"]
 	path = home/.vim/bundle/vim-powerline
-	url = git@github.com:Lokaltog/vim-powerline
+	url = http://github.com/Lokaltog/vim-powerline
 [submodule "home/.vim/bundle/minibufexpl.vim"]
 	path = home/.vim/bundle/minibufexpl.vim
-	url = git@github.com:fholgado/minibufexpl.vim
+	url = http://github.com/fholgado/minibufexpl.vim
 [submodule "home/.vim/bundle/bufkill.vim"]
 	path = home/.vim/bundle/bufkill.vim
-	url = git@github.com:/vim-scripts/bufkill.vim
+	url = http://github.com//vim-scripts/bufkill.vim
 [submodule "home/.vim/bundle/taglist.vim"]
 	path = home/.vim/bundle/taglist.vim
-	url = git@github.com:vim-scripts/taglist.vim
+	url = http://github.com/vim-scripts/taglist.vim
 [submodule "home/.vim/bundle/CursorLineCurrentWindow"]
 	path = home/.vim/bundle/CursorLineCurrentWindow
-	url = git@github.com:vim-scripts/CursorLineCurrentWindow
+	url = http://github.com/vim-scripts/CursorLineCurrentWindow
 [submodule "home/.vim/bundle/Command-T"]
 	path = home/.vim/bundle/Command-T
-	url = git@github.com:wincent/Command-T
+	url = http://github.com/wincent/Command-T
 [submodule "home/.vim/bundle/ctrlp.vim"]
 	path = home/.vim/bundle/ctrlp.vim
-	url = git@github.com:kien/ctrlp.vim
+	url = http://github.com/kien/ctrlp.vim
 [submodule "home/.vim/bundle/Conque-Shell"]
 	path = home/.vim/bundle/Conque-Shell
-	url = git@github.com:heterotopian/Conque-Shell
+	url = http://github.com/heterotopian/Conque-Shell
 [submodule "home/.vim/bundle/vim-colors-solarized"]
 	path = home/.vim/bundle/vim-colors-solarized
-	url = git@github.com:altercation/vim-colors-solarized
+	url = http://github.com/altercation/vim-colors-solarized
 [submodule "home/.fonts/ubuntu-mono-powerline"]
 	path = home/.fonts/ubuntu-mono-powerline
-	url = git@github.com:scotu/ubuntu-mono-powerline
+	url = http://github.com/scotu/ubuntu-mono-powerline
 [submodule "home/.fonts/ubuntu-mono-powerline-ttf"]
 	path = home/.fonts/ubuntu-mono-powerline-ttf
-	url = git@github.com:pdf/ubuntu-mono-powerline-ttf
+	url = http://github.com/pdf/ubuntu-mono-powerline-ttf
 [submodule "home/.vim/bundle/vim-bundle-mako"]
 	path = home/.vim/bundle/vim-bundle-mako
-	url = git@github.com:sophacles/vim-bundle-mako
+	url = http://github.com/sophacles/vim-bundle-mako
 [submodule "home/.vim/bundle/VimClojure"]
 	path = home/.vim/bundle/VimClojure
-	url = git@github.com:vim-scripts/VimClojure
+	url = http://github.com/vim-scripts/VimClojure
 [submodule "home/.vim/bundle/vim-surround"]
 	path = home/.vim/bundle/vim-surround
-	url = git@github.com:tpope/vim-surround
+	url = http://github.com/tpope/vim-surround
 [submodule "home/color/gnome-terminal-colors-solariezed"]
 	path = home/color/gnome-terminal-colors-solariezed
-	url = git@github.com:sigurdga/gnome-terminal-colors-solarized
+	url = http://github.com/sigurdga/gnome-terminal-colors-solarized
 [submodule "home/.vim/bundle/vim-hy"]
 	path = home/.vim/bundle/vim-hy
-	url = git@github.com:hylang/vim-hy
+	url = http://github.com/hylang/vim-hy
