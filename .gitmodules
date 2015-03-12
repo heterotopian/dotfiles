@@ -73,3 +73,9 @@
 [submodule "home/.vim/bundle/vim-hy"]
 	path = home/.vim/bundle/vim-hy
 	url = http://github.com/hylang/vim-hy
+[submodule "home/.vim/bundle/vim-css-color"]
+	path = home/.vim/bundle/vim-css-color
+	url = http://github.com/skammer/vim-css-color
+[submodule "home/.vim/bundle/vim-less"]
+	path = home/.vim/bundle/vim-less
+	url = http://github.com/groenewege/vim-less
