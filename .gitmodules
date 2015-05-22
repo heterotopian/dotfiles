@@ -79,3 +79,9 @@
 [submodule "home/.vim/bundle/vim-less"]
 	path = home/.vim/bundle/vim-less
 	url = http://github.com/groenewege/vim-less
+[submodule "home/.vim/bundle/vim-github-colorscheme"]
+	path = home/.vim/bundle/vim-github-colorscheme
+	url = http://github.com/endel/vim-github-colorscheme
+[submodule "home/.vim/bundle/flatui.vim"]
+	path = home/.vim/bundle/flatui.vim
+	url = http://github.com/john2x/flatui.vim
