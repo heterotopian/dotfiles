@@ -85,3 +85,6 @@
 [submodule "home/.vim/bundle/flatui.vim"]
 	path = home/.vim/bundle/flatui.vim
 	url = http://github.com/john2x/flatui.vim
+[submodule "home/.fonts/Menlo-for-Powerline"]
+	path = home/.fonts/Menlo-for-Powerline
+	url = http://github.com/abertsch/Menlo-for-Powerline
