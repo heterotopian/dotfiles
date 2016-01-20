@@ -1,0 +1,2 @@
+#!/bin/bash
+tmux list-windows -t 0 | cut -d: -f1 | xargs -I{} tmux select-layout -t0:{} even-vertical
