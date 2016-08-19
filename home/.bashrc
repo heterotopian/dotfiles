@@ -41,6 +41,14 @@ export PS1="\[\e[1;33m\]\u@\h\[\e[m\] \[\e[1;36m\]\w\[\e[m\] \$(parse_git_branch
 # Colors for ls
 export LS_COLORS='no=00:fi=00:di=01;34:ln=01;36:pi=01;40;33:so=01;35:bd=01;40;33:cd=01;40;33:or=01;05;37;41:mi=01;05;37;41:ex=01;32'
 
+# Colors for man
+export LESS_TERMCAP_mb=$'\e'"[1;31m"
+export LESS_TERMCAP_md=$'\e'"[1;31m"
+export LESS_TERMCAP_me=$'\e'"[0m"
+export LESS_TERMCAP_se=$'\e'"[0m"
+export LESS_TERMCAP_ue=$'\e'"[0m"
+export LESS_TERMCAP_us=$'\e'"[1;32m"
+
 # Load ~/.bashrc.local if it exists
 if [ -f ~/.bashrc.local ]; then
     . ~/.bashrc.local
