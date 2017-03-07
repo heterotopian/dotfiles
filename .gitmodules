@@ -94,3 +94,6 @@
 [submodule "home/.vim/bundle/Dockerfile.vim"]
 	path = home/.vim/bundle/Dockerfile.vim
 	url = http://github.com/ekalinin/Dockerfile.vim
+[submodule "home/.vim/bundle/vim-yaml"]
+	path = home/.vim/bundle/vim-yaml
+	url = https://github.com/avakhov/vim-yaml
