@@ -1,8 +1,18 @@
 #!/bin/bash
 shopt -s extglob
 shopt -s dotglob
+
 DESTINATION=${DESTINATION-$HOME}
-for file in home/!(*.swp); do
-    echo Linking ${file}
-    ln -sf `readlink -f ${file}` ${DESTINATION}
+
+for DOTFILE in home/!(*.swp)
+do
+    if [[ -L "${DOTFILE}" ]]
+    then
+        echo Copying symlink "${DOTFILE}" to "${DESTINATION}"
+        cp -P "${DOTFILE}" "${DESTINATION}"
+    else
+        TARGET=$(readlink -f "${DOTFILE}")
+        echo Linking "${DOTFILE}" from "${TARGET}" to "${DESTINATION}"
+        ln -sf "${TARGET}" ${DESTINATION}
+    fi
 done
