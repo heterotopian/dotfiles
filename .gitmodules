@@ -97,3 +97,6 @@
 [submodule "home/.vim/bundle/vim-yaml"]
 	path = home/.vim/bundle/vim-yaml
 	url = https://github.com/avakhov/vim-yaml
+[submodule "home/.vim/bundle/puppet-syntax-vim"]
+	path = home/.vim/bundle/puppet-syntax-vim
+	url = https://github.com/puppetlabs/puppet-syntax-vim
