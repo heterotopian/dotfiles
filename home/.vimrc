@@ -155,6 +155,9 @@
     " Ignore .pyc files
     set wildignore+=*.pyc
 
+    " Configure session creation
+    set sessionoptions=buffers
+
     " Supertab {
 
         au FileType python set omnifunc=pythoncomplete#Complete
