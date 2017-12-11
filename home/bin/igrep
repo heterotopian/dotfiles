@@ -1,2 +1,2 @@
 #!/bin/bash
-grep -i ${@} --color=auto
+grep -i "${@}" --color=auto
