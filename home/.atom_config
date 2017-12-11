@@ -42,6 +42,8 @@
     fontSize: 12
   "one-light-ui":
     fontSize: 12
+    hideDockButtons: true
+  pigments: {}
   "seti-icons": {}
   tabs:
     enableMruTabSwitching: false
