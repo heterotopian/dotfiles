@@ -6,8 +6,7 @@ DESTINATION=${DESTINATION-$HOME}
 
 for DOTFILE in home/!(*.swp)
 do
-    if [[ -L "${DOTFILE}" ]]
-    then
+    if [[ -L "${DOTFILE}" ]]; then
         echo Copying symlink "${DOTFILE}" to "${DESTINATION}"
         cp -P "${DOTFILE}" "${DESTINATION}"
     else
