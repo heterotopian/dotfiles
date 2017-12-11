@@ -17,6 +17,7 @@ file-icons@2.1.12
 firewatch-syntax@1.1.1
 git-plus@7.9.3
 github-syntax@0.2.0
+language-docker@1.1.8
 language-hy@0.1.0
 language-puppet@0.23.0
 language-restructuredtext@1.1.0
