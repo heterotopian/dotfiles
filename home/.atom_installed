@@ -20,6 +20,7 @@ github-atom-light-syntax@0.5.0
 github-syntax@0.2.0
 language-docker@1.1.8
 language-hy@0.1.0
+language-ini@1.19.0
 language-puppet@0.23.0
 language-restructuredtext@1.1.0
 loved-syntax@1.0.2
