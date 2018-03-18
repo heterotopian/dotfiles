@@ -1,5 +1,5 @@
 atom-github-theme@0.2.0
-atom-ide-ui@0.9.3
+atom-ide-ui@0.9.4
 atom-material-numix-syntax@0.2.1
 atom-material-syntax@1.0.8
 atom-material-syntax-light@0.4.6
@@ -16,7 +16,7 @@ duotone-stark-sea-syntax@2.1.0-6
 ex-mode@0.18.0
 file-icons@2.1.17
 firewatch-syntax@1.1.1
-git-plus@7.10.0
+git-plus@7.10.2
 github-atom-light-syntax@0.5.0
 github-syntax@0.2.0
 language-docker@1.1.8
@@ -44,5 +44,5 @@ toggler@0.3.1
 tone-syntax@0.2.0
 tree-view-scope-lines@0.2.0
 vim-mode@0.66.0
-vim-mode-plus@1.30.0
+vim-mode-plus@1.30.1
 
