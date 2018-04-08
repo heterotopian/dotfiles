@@ -14,7 +14,7 @@ duotone-dark-syntax@2.1.0
 duotone-light-syntax@2.1.0
 duotone-stark-sea-syntax@2.1.0-6
 ex-mode@0.18.0
-file-icons@2.1.17
+file-icons@2.1.18
 firewatch-syntax@1.1.1
 git-plus@7.10.2
 github-atom-light-syntax@0.5.0
@@ -24,6 +24,7 @@ language-hy@0.1.0
 language-ini@1.19.0
 language-puppet@0.23.0
 language-restructuredtext@1.1.0
+language-terraform@0.8.1
 loved-syntax@1.0.2
 octocat-syntax@2.2.1
 photon-syntax@0.10.2
@@ -41,8 +42,8 @@ spacegray-light-ui@0.1.0
 styri-syntax@0.2.0
 terminal-plus@0.14.5
 toggler@0.3.1
-tone-syntax@0.2.0
+tone-syntax@0.2.1
 tree-view-scope-lines@0.2.0
 vim-mode@0.66.0
-vim-mode-plus@1.30.1
+vim-mode-plus@1.32.0
 
