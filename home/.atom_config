@@ -1,10 +1,16 @@
 "*":
+  "atom-ide-ui":
+    use: {}
   "atom-material-ui": {}
   core:
     allowPendingPaneItems: false
     audioBeep: false
     autoHideMenuBar: true
     automaticallyUpdate: false
+    customFileTypes:
+      "source.ini": [
+        "service"
+      ]
     disabledPackages: [
       "wrap-guide"
       "terminal-plus"
@@ -25,7 +31,7 @@
     telemetryConsent: "limited"
     themes: [
       "one-light-ui"
-      "one-light-syntax"
+      "github-syntax"
     ]
   editor:
     fontFamily: "Menlo"
@@ -44,15 +50,28 @@
     fontSize: 12
     hideDockButtons: true
   "seti-icons": {}
+  "sync-settings":
+    _lastBackupHash: "4ce0adc7dbfa7733305aa5ae5f41d1b21acfc8c1"
+    gistId: "e052903a7346463ad4ec69ce890086fd"
   tabs:
     enableMruTabSwitching: false
   "tree-view":
     hideIgnoredNames: true
+    hideVcsIgnoredFiles: true
   "vim-mode": {}
   "vim-mode-plus":
-    notifiedCoffeeScriptNoLongerSupportedToExtendVMP: true
+    keymapYToYankToLastCharacterOfLine: true
   welcome:
     showOnStartup: false
+".basic.html.text":
+  editor:
+    tabLength: 2
 ".makefile.source":
   editor:
     showIndentGuide: false
+".restructuredtext.text":
+  editor:
+    softWrap: true
+".source.yaml":
+  editor:
+    tabLength: 2
