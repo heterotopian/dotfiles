@@ -19,6 +19,7 @@ git-plus@8.0.0
 github-atom-light-syntax@0.5.0
 github-syntax@0.2.0
 language-docker@1.1.8
+language-gitignore@0.3.0
 language-hy@0.1.0
 language-ini@1.20.0
 language-nginx@0.8.0
