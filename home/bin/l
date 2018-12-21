@@ -1,11 +1,17 @@
 #!/bin/bash
+
 LL="ls -l --color"
+
 if [ "${#}" -eq 0 ]; then
-    ls -l --color
+    # No arguments
+    ls -lh --color
 elif [ "${#}" -gt 1 ]; then
-    ls -l --color "${@}"
+    # More than one argument
+    ls -lh --color "${@}"
 elif [ -d "${1}" ]; then
-    ls -l --color "${1}"
+    # One directory argument
+    ls -lh --color "${1}"
 else
+    # None of the above
     more "${1}"
 fi
