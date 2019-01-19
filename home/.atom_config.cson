@@ -50,6 +50,10 @@
     fontSize: 12
     hideDockButtons: true
   "seti-icons": {}
+  "spell-check":
+    excludedScopes: [
+      "text.restructuredtext"
+    ]
   "sync-settings":
     _lastBackupHash: "4ce0adc7dbfa7733305aa5ae5f41d1b21acfc8c1"
     gistId: "e052903a7346463ad4ec69ce890086fd"
