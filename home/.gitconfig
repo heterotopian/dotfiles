@@ -12,3 +12,7 @@
 	abbrevCommit = true
 [format]
 	pretty = oneline
+[difftool]
+	prompt = false
+[merge]
+	tool = gvimdiff
