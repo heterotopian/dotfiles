@@ -60,6 +60,10 @@
 	" Expand tabs to spaces
 	set expandtab
 
+    " Override indent/tab size for some languages
+    autocmd FileType html setlocal shiftwidth=2 tabstop=2
+    autocmd FileType htmldjango setlocal shiftwidth=2 tabstop=2
+
     " Block indent with Tab in visual mode
     vmap <tab> >gv
 
