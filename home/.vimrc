@@ -18,6 +18,9 @@
             call add(g:pathogen_disabled, "minibufexpl.vim")
         endif
 
+        call add(g:pathogen_disabled, "vim-session")
+        call add(g:pathogen_disabled, "vim-misc")
+
     " }
 " }
 
