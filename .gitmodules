@@ -100,3 +100,9 @@
 [submodule "home/.vim/bundle/puppet-syntax-vim"]
 	path = home/.vim/bundle/puppet-syntax-vim
 	url = https://github.com/puppetlabs/puppet-syntax-vim
+[submodule "home/.vim/bundle/vim-misc"]
+	path = home/.vim/bundle/vim-misc
+	url = git@github.com:xolox/vim-misc
+[submodule "home/.vim/bundle/vim-session"]
+	path = home/.vim/bundle/vim-session
+	url = git@github.com:xolox/vim-session
