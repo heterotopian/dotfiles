@@ -1,4 +1,7 @@
 "*":
+  "atom-beautify":
+    general:
+      _analyticsUserId: "c6e528b5-717a-49be-bf38-376b7bc2af3a"
   "atom-ide-ui":
     use: {}
   "atom-material-ui": {}
@@ -44,6 +47,8 @@
     userId: "e06395c2-a317-8715-f5e4-25213dd4934f"
   "file-icons":
     tabPaneIcon: false
+  "git-plus":
+    general: {}
   "one-dark-ui":
     fontSize: 12
   "one-light-ui":
@@ -67,6 +72,7 @@
     keymapYToYankToLastCharacterOfLine: true
   welcome:
     showOnStartup: false
+  whitespace: {}
 ".basic.html.text":
   editor:
     tabLength: 2
