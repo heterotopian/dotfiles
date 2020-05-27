@@ -1,8 +1,10 @@
 # Parameters
+
 HOMEDIR = $(shell cd && pwd)
 TEMPDIR = tmp
 
 # Targets
+
 INSTALLS = install-rsync install-symlink
 COMMANDS = $(INSTALLS) import uninstall
 TESTS    = $(addprefix test-,$(COMMANDS))
