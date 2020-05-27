@@ -21,3 +21,6 @@
 [alias]
 	br = branch -vva
 	graph = log --graph
+	pullall = !git pull && git submodule update --init --recursive
+[submodule]
+	recurse = true
