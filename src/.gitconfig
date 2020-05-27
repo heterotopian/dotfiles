@@ -22,5 +22,6 @@
 	br = branch -vva
 	graph = log --graph
 	pullall = !git pull && git submodule update --init --recursive
+	cloneall = "!f() { git clone --recurse-submodules \"$@\"; }; f"
 [submodule]
 	recurse = true
