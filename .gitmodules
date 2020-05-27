@@ -1,0 +1,114 @@
+[submodule "src/.vim/bundle/vim-pathogen"]
+	path = src/.vim/bundle/vim-pathogen
+	url = http://github.com/tpope/vim-pathogen
+[submodule "src/.vim/bundle/supertab"]
+	path = src/.vim/bundle/supertab
+	url = http://github.com/ervandew/supertab
+[submodule "src/.vim/bundle/CSApprox"]
+	path = src/.vim/bundle/CSApprox
+	url = http://github.com/vim-scripts/CSApprox
+[submodule "src/.vim/bundle/MultipleSearch"]
+	path = src/.vim/bundle/MultipleSearch
+	url = http://github.com/vim-scripts/MultipleSearch
+[submodule "src/.vim/bundle/xmledit"]
+	path = src/.vim/bundle/xmledit
+	url = http://github.com/sukima/xmledit
+[submodule "src/.vim/bundle/SQLUtilities"]
+	path = src/.vim/bundle/SQLUtilities
+	url = http://github.com/vim-scripts/SQLUtilities
+[submodule "src/.vim/bundle/Align"]
+	path = src/.vim/bundle/Align
+	url = http://github.com/vim-scripts/Align
+[submodule "src/.vim/bundle/nerdtree"]
+	path = src/.vim/bundle/nerdtree
+	url = http://github.com/scrooloose/nerdtree
+[submodule "src/.vim/bundle/tomorrow-theme"]
+	path = src/.vim/bundle/tomorrow-theme
+	url = http://github.com/chriskempson/tomorrow-theme
+[submodule "src/.vim/bundle/vim-powerline"]
+	path = src/.vim/bundle/vim-powerline
+	url = http://github.com/Lokaltog/vim-powerline
+[submodule "src/.vim/bundle/minibufexpl.vim"]
+	path = src/.vim/bundle/minibufexpl.vim
+	url = http://github.com/fholgado/minibufexpl.vim
+[submodule "src/.vim/bundle/bufkill.vim"]
+	path = src/.vim/bundle/bufkill.vim
+	url = http://github.com//vim-scripts/bufkill.vim
+[submodule "src/.vim/bundle/taglist.vim"]
+	path = src/.vim/bundle/taglist.vim
+	url = http://github.com/vim-scripts/taglist.vim
+[submodule "src/.vim/bundle/CursorLineCurrentWindow"]
+	path = src/.vim/bundle/CursorLineCurrentWindow
+	url = http://github.com/vim-scripts/CursorLineCurrentWindow
+[submodule "src/.vim/bundle/Command-T"]
+	path = src/.vim/bundle/Command-T
+	url = http://github.com/wincent/Command-T
+[submodule "src/.vim/bundle/ctrlp.vim"]
+	path = src/.vim/bundle/ctrlp.vim
+	url = http://github.com/kien/ctrlp.vim
+[submodule "src/.vim/bundle/Conque-Shell"]
+	path = src/.vim/bundle/Conque-Shell
+	url = http://github.com/heterotopian/Conque-Shell
+[submodule "src/.vim/bundle/vim-colors-solarized"]
+	path = src/.vim/bundle/vim-colors-solarized
+	url = http://github.com/altercation/vim-colors-solarized
+[submodule "src/.fonts/ubuntu-mono-powerline"]
+	path = src/.fonts/ubuntu-mono-powerline
+	url = http://github.com/scotu/ubuntu-mono-powerline
+[submodule "src/.fonts/ubuntu-mono-powerline-ttf"]
+	path = src/.fonts/ubuntu-mono-powerline-ttf
+	url = http://github.com/pdf/ubuntu-mono-powerline-ttf
+[submodule "src/.vim/bundle/vim-bundle-mako"]
+	path = src/.vim/bundle/vim-bundle-mako
+	url = http://github.com/sophacles/vim-bundle-mako
+[submodule "src/.vim/bundle/VimClojure"]
+	path = src/.vim/bundle/VimClojure
+	url = http://github.com/vim-scripts/VimClojure
+[submodule "src/.vim/bundle/vim-surround"]
+	path = src/.vim/bundle/vim-surround
+	url = http://github.com/tpope/vim-surround
+[submodule "src/color/gnome-terminal-colors-solariezed"]
+	path = src/color/gnome-terminal-colors-solariezed
+	url = http://github.com/sigurdga/gnome-terminal-colors-solarized
+[submodule "src/.vim/bundle/vim-hy"]
+	path = src/.vim/bundle/vim-hy
+	url = http://github.com/hylang/vim-hy
+[submodule "src/.vim/bundle/vim-css-color"]
+	path = src/.vim/bundle/vim-css-color
+	url = http://github.com/skammer/vim-css-color
+[submodule "src/.vim/bundle/vim-less"]
+	path = src/.vim/bundle/vim-less
+	url = http://github.com/groenewege/vim-less
+[submodule "src/.vim/bundle/vim-github-colorscheme"]
+	path = src/.vim/bundle/vim-github-colorscheme
+	url = http://github.com/endel/vim-github-colorscheme
+[submodule "src/.vim/bundle/flatui.vim"]
+	path = src/.vim/bundle/flatui.vim
+	url = http://github.com/john2x/flatui.vim
+[submodule "src/.fonts/Menlo-for-Powerline"]
+	path = src/.fonts/Menlo-for-Powerline
+	url = http://github.com/abertsch/Menlo-for-Powerline
+[submodule "src/color/one-gnome-terminal"]
+	path = src/color/one-gnome-terminal
+	url = https://github.com/denysdovhan/one-gnome-terminal
+[submodule "src/.vim/bundle/Dockerfile.vim"]
+	path = src/.vim/bundle/Dockerfile.vim
+	url = http://github.com/ekalinin/Dockerfile.vim
+[submodule "src/.vim/bundle/vim-yaml"]
+	path = src/.vim/bundle/vim-yaml
+	url = https://github.com/avakhov/vim-yaml
+[submodule "src/.vim/bundle/puppet-syntax-vim"]
+	path = src/.vim/bundle/puppet-syntax-vim
+	url = https://github.com/puppetlabs/puppet-syntax-vim
+[submodule "src/.vim/bundle/vim-misc"]
+	path = src/.vim/bundle/vim-misc
+	url = git@github.com:xolox/vim-misc
+[submodule "src/.vim/bundle/vim-session"]
+	path = src/.vim/bundle/vim-session
+	url = git@github.com:xolox/vim-session
+[submodule "FiraCode"]
+	path = FiraCode
+	url = git@github.com:tonsky/FiraCode
+[submodule "src/.fonts/FiraMono"]
+	path = src/.fonts/FiraMono
+	url = git@github.com:tonsky/FiraCode
