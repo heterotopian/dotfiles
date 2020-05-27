@@ -1,0 +1,48 @@
+#!/bin/bash -e
+
+# Validate arguments
+
+if [[ $# -eq 3 ]]
+then
+    CONTENT=$1
+    TARGET=$2
+    shift
+    shift
+    COMMAND=$@
+else
+    echo usage: $0 content target command
+    exit 1
+fi
+
+if [ ! -d "${CONTENT}" ]
+then
+    echo error: content path must be directory
+    exit 1
+fi
+
+if [ ! -d "${TARGET}" ]
+then
+    echo error: target path must be directory
+    exit 1
+fi
+
+# Debug logging
+
+for VARIABLE in CONTENT TARGET COMMAND
+do
+    EXPR='"$'"${VARIABLE}"'"'
+    VALUE=$(eval "printf ${EXPR}")
+    printf '%s: %s\n' "${VARIABLE}" "${VALUE}"
+done
+
+# Run command for each content file found in target
+
+while IFS= read -r -d '' CONTENTFILE
+do
+    BASENAME=$(basename "${CONTENTFILE}")
+    TARGETFILE="${TARGET}/${BASENAME}"
+    if [ -a "${TARGETFILE}" ]
+    then
+       bash -c "${COMMAND}" "${CONTENT}" "${TARGETFILE}"
+    fi
+done < <(find "${CONTENT}" -mindepth 1 -maxdepth 1 -print0)
