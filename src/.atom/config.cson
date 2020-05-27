@@ -1,0 +1,87 @@
+"*":
+  "atom-beautify":
+    general:
+      _analyticsUserId: "c6e528b5-717a-49be-bf38-376b7bc2af3a"
+  "atom-ide-ui":
+    use: {}
+  "atom-material-ui": {}
+  core:
+    allowPendingPaneItems: false
+    audioBeep: false
+    autoHideMenuBar: true
+    automaticallyUpdate: false
+    customFileTypes:
+      "source.ini": [
+        "service"
+      ]
+    disabledPackages: [
+      "wrap-guide"
+      "terminal-plus"
+      "vim-mode"
+    ]
+    ignoredNames: [
+      ".git"
+      ".hg"
+      ".svn"
+      ".DS_Store"
+      "._*"
+      "Thumbs.db"
+      "*.pyc"
+      "*.swp"
+      "*.swm"
+      "*.swn"
+    ]
+    telemetryConsent: "limited"
+    themes: [
+      "one-light-ui"
+      "github-syntax"
+    ]
+  editor:
+    fontFamily: "Menlo"
+    invisibles: {}
+    lineHeight: 1.3
+    scrollPastEnd: true
+    tabLength: 4
+    zoomFontWhenCtrlScrolling: false
+  "exception-reporting":
+    userId: "e06395c2-a317-8715-f5e4-25213dd4934f"
+  "file-icons":
+    tabPaneIcon: false
+  "git-plus":
+    general: {}
+  "one-dark-ui":
+    fontSize: 12
+  "one-light-ui":
+    fontSize: 12
+    hideDockButtons: true
+  "seti-icons": {}
+  "spell-check":
+    excludedScopes: [
+      "text.restructuredtext"
+    ]
+  "sync-settings":
+    _lastBackupHash: "4ce0adc7dbfa7733305aa5ae5f41d1b21acfc8c1"
+    gistId: "e052903a7346463ad4ec69ce890086fd"
+  tabs:
+    enableMruTabSwitching: false
+  "tree-view":
+    hideIgnoredNames: true
+    hideVcsIgnoredFiles: true
+  "vim-mode": {}
+  "vim-mode-plus":
+    keymapYToYankToLastCharacterOfLine: true
+  welcome:
+    showOnStartup: false
+  whitespace: {}
+".basic.html.text":
+  editor:
+    tabLength: 2
+".makefile.source":
+  editor:
+    showIndentGuide: false
+".restructuredtext.text":
+  editor:
+    softWrap: true
+".source.yaml":
+  editor:
+    tabLength: 2
