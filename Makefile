@@ -1,13 +1,15 @@
 # Parameters
+
 HOMEDIR = $(shell cd && pwd)
 TEMPDIR = tmp
 
 # Targets
+
 INSTALLS = install-rsync install-symlink
 COMMANDS = $(INSTALLS) import uninstall
 TESTS    = $(addprefix test-,$(COMMANDS))
 
-.PHONY: clean install $(COMMANDS) test $(TESTS)
+.PHONY: clean install $(COMMANDS) test-install $(TESTS)
 
 clean:
 	rm -rf $(TEMPDIR)
@@ -28,11 +30,11 @@ import:
 	bin/foreach-installed src $(HOMEDIR) 'cp -ra $$1 $$0/'
 
 uninstall:
-	bin/foreach-installed src $(HOMEDIR) 'echo rm -r $$1'
+	bin/foreach-installed src $(HOMEDIR) 'rm -r $$1'
 
 # Tests
 
-test: test-install-rsync
+test-install: test-install-rsync
 
 test-install-rsync: clean $(TEMPDIR)
 	bin/install-rsync src $(TEMPDIR)
