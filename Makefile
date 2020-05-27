@@ -43,4 +43,6 @@ test-import: clean $(TEMPDIR)
 	cp -ra src/. $(TEMPDIR)
 	bin/foreach-installed src $(HOMEDIR) 'cp -ra $$1 $(TEMPDIR)/'
 
-test-uninstall:
+test-uninstall: clean $(TEMPDIR)
+	cp -ra src/. $(TEMPDIR)
+	bin/foreach-installed src $(TEMPDIR) 'rm -r $$1'
