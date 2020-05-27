@@ -3,7 +3,7 @@
 	email = cs@wahdis.com
 [core]
 	filemode = false
-	excludesfile = ~/.gitignore_global
+	excludesfile = ~/.gitignore
 [diff]
 	tool = gvimdiff
 [difftool]
