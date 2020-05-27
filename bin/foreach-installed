@@ -43,6 +43,6 @@ do
     TARGETFILE="${TARGET}/${BASENAME}"
     if [ -a "${TARGETFILE}" ]
     then
-       bash -c "${COMMAND}" "${CONTENT}" "${TARGETFILE}"
+       (set -x; bash -c "${COMMAND}" "${CONTENT}" "${TARGETFILE}")
     fi
 done < <(find "${CONTENT}" -mindepth 1 -maxdepth 1 -print0)
