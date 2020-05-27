@@ -25,3 +25,5 @@
 	cloneall = "!f() { git clone --recurse-submodules \"$@\"; }; f"
 [submodule]
 	recurse = true
+[include]
+	path = ~/.gitconfig.local
