@@ -6,6 +6,9 @@ TEMPDIR = tmp
 clean:
 	rm -rf $(TEMPDIR)
 
+$(TEMPDIR):
+	mkdir -p $(TEMPDIR)
+
 install: install-rsync
 
 install-rsync:
@@ -15,6 +18,5 @@ import:
 
 test: test-install-rsync
 
-test-install-rsync: clean
-	mkdir -p $(TEMPDIR)
+test-install-rsync: clean $(TEMPDIR)
 	bin/install-rsync src $(TEMPDIR)
