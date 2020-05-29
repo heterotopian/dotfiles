@@ -3,7 +3,7 @@ HOMEDIR = $(shell cd && pwd)
 TEMPDIR = tmp
 
 # Targets
-INSTALLS = install-rsync install-symlink
+INSTALLS = install-rsync
 COMMANDS = $(INSTALLS) import uninstall
 TESTS    = $(addprefix test-,$(COMMANDS))
 
@@ -20,8 +20,6 @@ install: install-rsync
 install-rsync:
 	bin/install-rsync src $(HOMEDIR)
 
-install-symlink:
-
 import:
 	bin/foreach-installed src $(HOMEDIR) 'cp -ra $$1 $$0/'
 
@@ -32,8 +30,6 @@ test-install: test-install-rsync
 
 test-install-rsync: clean $(TEMPDIR)
 	bin/install-rsync src $(TEMPDIR)
-
-test-install-symlink:
 
 test-import: clean $(TEMPDIR)
 	cp -ra src/. $(TEMPDIR)
