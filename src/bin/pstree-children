@@ -1,0 +1,11 @@
+#!/bin/bash
+
+if [[ $# -ne 1 ]]
+then
+    echo Usage: $(basename "$0") parent
+    exit 1
+fi
+
+PARENT=$1
+
+pstree -p "${PARENT}" | grep -o '([0-9]\+)' | grep -o '[0-9]\+'
