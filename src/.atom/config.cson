@@ -1,7 +1,6 @@
 "*":
   "atom-beautify":
-    general:
-      _analyticsUserId: "c6e528b5-717a-49be-bf38-376b7bc2af3a"
+    general: {}
   "atom-ide-ui":
     use: {}
   "atom-material-ui": {}
@@ -16,8 +15,6 @@
       ]
     disabledPackages: [
       "wrap-guide"
-      "terminal-plus"
-      "vim-mode"
     ]
     ignoredNames: [
       ".git"
@@ -47,7 +44,9 @@
     userId: "e06395c2-a317-8715-f5e4-25213dd4934f"
   "file-icons":
     tabPaneIcon: false
+  "git-diff": {}
   "git-plus":
+    commits: {}
     general: {}
   "one-dark-ui":
     fontSize: 12
@@ -59,14 +58,13 @@
     excludedScopes: [
       "text.restructuredtext"
     ]
-  "sync-settings":
-    _lastBackupHash: "4ce0adc7dbfa7733305aa5ae5f41d1b21acfc8c1"
-    gistId: "e052903a7346463ad4ec69ce890086fd"
   tabs:
     enableMruTabSwitching: false
+    enableVcsColoring: true
   "tree-view":
     hideIgnoredNames: true
     hideVcsIgnoredFiles: true
+    squashDirectoryNames: true
   "vim-mode": {}
   "vim-mode-plus":
     keymapYToYankToLastCharacterOfLine: true
