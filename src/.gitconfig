@@ -27,3 +27,5 @@
 	recurse = true
 [include]
 	path = ~/.gitconfig.local
+[includeIf "gitdir:~/gitlab/"]
+	path = ~/.gitconfig.gitlab
