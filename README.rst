@@ -23,10 +23,9 @@ Copy deployed files from homedir into repository
 
     $ make import
 
-    
+
 Delete deployed files in homedir
 ================================
-
 
 ::
 
