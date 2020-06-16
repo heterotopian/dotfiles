@@ -9,15 +9,9 @@ else
     exit 1
 fi
 
-if [ ! -d "${CONTENT}" ]
+if [[ ! -d "${CONTENT}" ]] || [[ ! -d "${TARGET}" ]]
 then
-    echo error: content path must be directory
-    exit 1
-fi
-
-if [ ! -d "${TARGET}" ]
-then
-    echo error: target path must be directory
+    echo error: content/target paths must be directories
     exit 1
 fi
 
