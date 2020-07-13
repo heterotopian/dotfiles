@@ -1,0 +1,14 @@
+#!/bin/bash
+# Show terminal color palette
+
+RESET="$(tput sgr0)"
+TEXT="yes no foo bar"
+
+for IDX in {0..15}
+do
+    FG="$(tput setaf ${IDX})"
+    BG="$(tput setab ${IDX})"
+    printf '%s%+2s: ' "${RESET}" "${IDX}"
+    printf '%s%s%s ' "${RESET}" "${FG}" "${TEXT}"
+    printf '%s%s%s%s\n' "${RESET}" "${BG}" "${TEXT}" "${RESET}"
+done
