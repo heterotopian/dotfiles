@@ -1,15 +1,57 @@
 # Make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
+# Terminal colors
+TERM_RESET=$(tput sgr0)
+TERM_BOLD=$(tput bold)
+
+TERM_COLOR_WHITE=15
+TERM_COLOR_BLACK=0
+TERM_COLOR_RED=1
+TERM_COLOR_GREEN=2
+TERM_COLOR_YELLOW=3
+TERM_COLOR_BLUE=4
+TERM_COLOR_PURPLE=5
+TERM_COLOR_CYAN=6
+TERM_COLOR_LIGHTGRAY=7
+TERM_COLOR_DARKGRAY=8
+
+TERM_FG_WHITE=$(tput setaf ${TERM_COLOR_WHITE})
+TERM_FG_BLACK=$(tput setaf ${TERM_COLOR_BLACK})
+TERM_FG_RED=$(tput setaf ${TERM_COLOR_RED})
+TERM_FG_GREEN=$(tput setaf ${TERM_COLOR_GREEN})
+TERM_FG_YELLOW=$(tput setaf ${TERM_COLOR_YELLOW})
+TERM_FG_BLUE=$(tput setaf ${TERM_COLOR_BLUE})
+TERM_FG_PURPLE=$(tput setaf ${TERM_COLOR_PURPLE})
+TERM_FG_CYAN=$(tput setaf ${TERM_COLOR_CYAN})
+TERM_FG_LIGHTGRAY=$(tput setaf ${TERM_COLOR_LIGHTGRAY})
+TERM_FG_DARKGRAY=$(tput setaf ${TERM_COLOR_DARKGRAY})
+
+TERM_BG_WHITE=$(tput setab ${TERM_COLOR_WHITE})
+TERM_BG_BLACK=$(tput setab ${TERM_COLOR_BLACK})
+TERM_BG_RED=$(tput setab ${TERM_COLOR_RED})
+TERM_BG_GREEN=$(tput setab ${TERM_COLOR_GREEN})
+TERM_BG_YELLOW=$(tput setab ${TERM_COLOR_YELLOW})
+TERM_BG_BLUE=$(tput setab ${TERM_COLOR_BLUE})
+TERM_BG_PURPLE=$(tput setab ${TERM_COLOR_PURPLE})
+TERM_BG_CYAN=$(tput setab ${TERM_COLOR_CYAN})
+TERM_BG_LIGHTGRAY=$(tput setab ${TERM_COLOR_LIGHTGRAY})
+TERM_BG_DARKGRAY=$(tput setab ${TERM_COLOR_DARKGRAY})
+
+# Helper for printing ANSI escape codes to stdout/stdett
+escape-ansi-colors() {
+    sed "s/\x1b/^[/g"
+}
+
 # Make colorized man pages interact better with `env`
 man() {
-    LESS_TERMCAP_mb=$'\e'"[1;31m" \
-    LESS_TERMCAP_md=$'\e'"[1;31m" \
-    LESS_TERMCAP_me=$'\e'"[0m" \
-    LESS_TERMCAP_se=$'\e'"[0m" \
-    LESS_TERMCAP_so=$'\e'"[1;44;33m" \
-    LESS_TERMCAP_ue=$'\e'"[0m" \
-    LESS_TERMCAP_us=$'\e'"[1;32m" \
+    LESS_TERMCAP_mb="${TERM_BOLD}${TERM_FG_CYAN}" \
+    LESS_TERMCAP_md="${TERM_BOLD}${TERM_FG_CYAN}" \
+    LESS_TERMCAP_me="${TERM_RESET}" \
+    LESS_TERMCAP_se="${TERM_RESET}" \
+    LESS_TERMCAP_ue="${TERM_RESET}" \
+    LESS_TERMCAP_us="${TERM_BOLD}${TERM_FG_YELLOW}" \
+    LESS_TERMCAP_so="${TERM_BOLD}${TERM_FG_WHITE}${TERM_BG_BLUE}" \
     command man "$@"
 }
 
