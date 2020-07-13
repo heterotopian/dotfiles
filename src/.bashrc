@@ -55,7 +55,7 @@ man() {
     command man "$@"
 }
 
-gitpull() {
+gitfetch() {
     git fetch --prune -v
     echo
     git br
