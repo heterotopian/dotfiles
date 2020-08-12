@@ -1,5 +1,5 @@
 {
-    "workbench.colorTheme": "DuoTone Dark Sea",
+    "workbench.colorTheme": "GitHub Light",
     "window.zoomLevel": 0,
     "workbench.startupEditor": "newUntitledFile",
     "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
@@ -140,5 +140,13 @@
     "files.watcherExclude": {
         "pyenv/**": true
     },
-    "terminal.integrated.shell.linux": "/bin/bash"
+    "terminal.integrated.shell.linux": "/bin/bash",
+    "window.menuBarVisibility": "toggle",
+    "gitlens.currentLine.enabled": false,
+    "gitlens.hovers.currentLine.over": "line",
+    "gitlens.codeLens.enabled": false,
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "python.jediEnabled": false,
+    "vsintellicode.modelDownloadPath": ""
 }
