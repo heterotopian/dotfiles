@@ -146,5 +146,4 @@
     "gitlens.hovers.currentLine.over": "line",
     "gitlens.codeLens.enabled": false,
     "scm.providerCountBadge": "visible",
-    "terminal.integrated.shell.linux": "/bin/bash",
 }
