@@ -3,8 +3,8 @@
     " Load Pathogen from non-standard location
     runtime bundle/vim-pathogen/autoload/pathogen.vim
 
-	" Disable vi compatibility
-	set nocompatible
+    " Disable vi compatibility
+    set nocompatible
 
     " Pathogen {
 
@@ -26,42 +26,42 @@
 
 " Load Pathogen {
 
-	call pathogen#infect()
+    call pathogen#infect()
     Helptags
-	filetype off
-	syntax on
-	filetype plugin indent on
+    filetype off
+    syntax on
+    filetype plugin indent on
 
 " }
 
 " Post-Pathogen infect {
 
-	" Allow deleting of any character with backspace
-	set backspace=indent,eol,start
+    " Allow deleting of any character with backspace
+    set backspace=indent,eol,start
 
-	" Do not wrap long lines
-	set nowrap
+    " Do not wrap long lines
+    set nowrap
 
-	" Enable mouse when running in terminal
-	set mouse=a
+    " Enable mouse when running in terminal
+    set mouse=a
 
-	" Disable spell check
-	set nospell
+    " Disable spell check
+    set nospell
 
-	" Enable syntax highlighting
-	syntax enable
-	
-	" Do not automatically backup files 
-	set nobackup
+    " Enable syntax highlighting
+    syntax enable
 
-	" Indent (outdent) 4 columns for >> (<<)
-	set shiftwidth=4
-	
-	" Display tabs 4 spaces wide
-	set tabstop=4
+    " Do not automatically backup files
+    set nobackup
 
-	" Expand tabs to spaces
-	set expandtab
+    " Indent (outdent) 4 columns for >> (<<)
+    set shiftwidth=4
+
+    " Display tabs 4 spaces wide
+    set tabstop=4
+
+    " Expand tabs to spaces
+    set expandtab
 
     " Override indent/tab size for some languages
     autocmd FileType html setlocal shiftwidth=2 tabstop=2
@@ -73,23 +73,23 @@
     " Block dedent with Shift-Tab in visual mode
     vmap <s-tab> <gv
 
-	" Show line numbers
-	set number
+    " Show line numbers
+    set number
 
-	" Use incremental search for /
-	set incsearch
+    " Use incremental search for /
+    set incsearch
 
-	" Highlight search
-	set hlsearch
+    " Highlight search
+    set hlsearch
 
     " Toggle highlighting of most recent search
     map <leader>H :nohlsearch<cr>
 
-	" Open horizontal splits below current split
-	set splitbelow
+    " Open horizontal splits below current split
+    set splitbelow
 
-	" Open vertical splits to the right of current split
-	set splitright
+    " Open vertical splits to the right of current split
+    set splitright
 
     " Open horizontal split
     noremap <leader>h :split<CR>
@@ -100,21 +100,21 @@
     " Close active split
     noremap <leader>c :close<CR>
 
-	set laststatus=2
-	set guioptions-=T
-	set guioptions-=m
-	set hidden
+    set laststatus=2
+    set guioptions-=T
+    set guioptions-=m
+    set hidden
 
-	" Resize splits on window resize
-	autocmd VimResized * wincmd =
+    " Resize splits on window resize
+    autocmd VimResized * wincmd =
 
     " Suppress reload prompt when file mode changes
     autocmd FileChangedShell * let v:fcs_choice = (v:fcs_reason == "mode") ? "" : "ask"
 
-	" Color scheme
-	set t_Co=16
-	set background=dark
-	colorscheme ir_black
+    " Color scheme
+    set t_Co=16
+    set background=dark
+    colorscheme ir_black
 
     " Map Alt- to the same behavior in vim and gvim
     let c='a'
@@ -130,7 +130,7 @@
     " Maximize Python syntax highlighting
     " let python_highlight_all = 1
 
-	" Movement
+    " Movement
     " Cycle buffers in current split
     nmap <f1> :bprev<CR>
     nmap <f2> :bnext<CR>
@@ -225,7 +225,7 @@
 
         " Show buffer list even if only one buffer is open
         let g:miniBufExplorerMoreThanOne=0
-        
+
         " Do not show numbers in buffer list
         let g:miniBufExplShowBufNumbers=0
 
@@ -241,14 +241,14 @@
 
         " Appear on left
         let Tlist_Use_Right_Window=0
-        
+
         " Open with <leader>l
         map <leader>l :TlistToggle<CR>
 
     " }
 
     " CursorLienCurrentWindow {
-    
+
         set cursorline
 
     " }
@@ -259,4 +259,3 @@
     endif
 
 " }
-
