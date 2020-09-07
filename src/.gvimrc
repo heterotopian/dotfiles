@@ -4,8 +4,16 @@ set columns=100
 
 " Font
 if has('win32')
-	set guifont=Lucida_Console:h10	
+    " Font
+	set guifont=Consolas\ NF:h11
+
+    " Line height
+    set linespace=-2
+
+    " Show menu
+	set guioptions+=m
 else
+    " Font
 	set guifont=Ubuntu\ Mono\ for\ Powerline\ 12
 endif
 
