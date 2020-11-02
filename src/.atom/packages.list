@@ -17,7 +17,7 @@ duotone-light-blue-syntax@1.0.1
 duotone-light-syntax@2.1.0
 duotone-stark-sea-syntax@2.1.0-6
 ex-mode@0.18.0
-file-icons@2.1.41
+file-icons@2.1.44
 firewatch-syntax@1.1.1
 git-plus@8.7.1
 github-atom-light-syntax@0.5.0
@@ -34,9 +34,9 @@ loved-syntax@1.0.2
 octocat-syntax@2.2.7
 photon-syntax@0.10.2
 piatto-light-syntax@0.2.2
-pigments@0.40.2
+pigments@0.40.6
 pristine-ui@1.1.11
-pure-syntax@1.0.1
+pure-syntax@2.0.0
 seti-syntax@1.2.0
 seti-ui@1.11.0
 spacegray-dark-neue-syntax@1.4.2
@@ -49,3 +49,4 @@ toggler@0.3.1
 tone-syntax@0.2.2
 tree-view-scope-lines@0.2.0
 vim-mode-plus@1.36.4
+
