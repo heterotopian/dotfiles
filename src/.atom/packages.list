@@ -17,7 +17,7 @@ duotone-light-blue-syntax@1.0.1
 duotone-light-syntax@2.1.0
 duotone-stark-sea-syntax@2.1.0-6
 ex-mode@0.18.0
-file-icons@2.1.44
+file-icons@2.1.46
 firewatch-syntax@1.1.1
 git-plus@8.7.1
 github-atom-light-syntax@0.5.0
@@ -29,7 +29,7 @@ language-ini@1.23.0
 language-nginx@0.8.0
 language-puppet@0.23.0
 language-restructuredtext@1.1.2
-language-terraform@0.9.3
+language-terraform@0.9.6
 loved-syntax@1.0.2
 octocat-syntax@2.2.7
 photon-syntax@0.10.2
