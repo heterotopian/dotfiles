@@ -146,16 +146,15 @@
     "python.jediEnabled": false,
     "vsintellicode.modelDownloadPath": "",
     "remote.SSH.remotePlatform": {
-        "bos-rnd3": "linux",
-        "bos-rnd4": "linux",
-        "bos-rndapp01": "linux"
+        "bos-rnd3.acadian-asset.com": "linux"
     },
-    "gitlens.currentLine.enabled": false,
-    "gitlens.codeLens.enabled": false,
     "gitlens.views.repositories.location": "gitlens",
     "gitlens.views.fileHistory.location": "gitlens",
     "gitlens.views.lineHistory.location": "gitlens",
     "gitlens.views.compare.location": "gitlens",
     "gitlens.views.search.location": "gitlens",
-    "gitlens.keymap": "alternate"
+    "gitlens.keymap": "alternate",
+    "gitlens.currentLine.enabled": false,
+    "gitlens.codeLens.enabled": false,
+    "material-icon-theme.folders.theme": "classic"
 }
