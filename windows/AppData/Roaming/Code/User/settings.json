@@ -140,7 +140,6 @@
         "pyenv/**": true
     },
     "terminal.integrated.shell.linux": "/bin/bash",
-    "gitlens.hovers.currentLine.over": "line",
     "editor.suggestSelection": "first",
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     "python.jediEnabled": false,
@@ -154,7 +153,10 @@
     "gitlens.views.compare.location": "gitlens",
     "gitlens.views.search.location": "gitlens",
     "gitlens.keymap": "alternate",
-    "gitlens.currentLine.enabled": false,
+    "python.languageServer": "Pylance",
     "gitlens.codeLens.enabled": false,
-    "material-icon-theme.folders.theme": "classic"
+    "material-icon-theme.folders.theme": "classic",
+    "gitlens.views.tags.files.layout": "tree",
+    "gitlens.hovers.currentLine.enabled": false,
+    "gitlens.currentLine.enabled": false
 }
