@@ -71,5 +71,10 @@
     {
         "key": "ctrl+k down",
         "command": "workbench.action.splitEditorDown"
+    },
+    {
+        "key": "ctrl+j",
+        "command": "-extension.vim_ctrl+j",
+        "when": "editorTextFocus && vim.active && vim.use<C-j> && !inDebugRepl"
     }
 ]
