@@ -1,10 +1,7 @@
 # Make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
-# Terminal colors
-TERM_RESET=$(tput sgr0)
-TERM_BOLD=$(tput bold)
-
+# Terminal output escape sequences
 TERM_COLOR_WHITE=15
 TERM_COLOR_BLACK=0
 TERM_COLOR_RED=1
@@ -37,6 +34,17 @@ TERM_BG_PURPLE=$(tput setab ${TERM_COLOR_PURPLE})
 TERM_BG_CYAN=$(tput setab ${TERM_COLOR_CYAN})
 TERM_BG_LIGHTGRAY=$(tput setab ${TERM_COLOR_LIGHTGRAY})
 TERM_BG_DARKGRAY=$(tput setab ${TERM_COLOR_DARKGRAY})
+
+TERM_RESET=$(tput sgr0)
+TERM_BOLD=$(tput bold)
+TERM_UNDERLINE=$(tput smul)
+
+output-sequence () {
+    printf "%b" "\e[${1}m"
+}
+
+TERM_FG_DEFAULT=$(output-sequence 39)
+TERM_BG_DEFAULT=$(output-sequence 49)
 
 # Helper for printing ANSI escape codes to stdout/stdett
 escape-ansi-colors() {
