@@ -71,6 +71,10 @@ gitfetch() {
     git status
 }
 
+cdtmp() {
+    cd "$(mktemp -d)"
+}
+
 # Enable 256 color support in terminal
 if [ -n "$DISPLAY" -a "$TERM" == "xterm" ]; then
     export TERM=xterm-256color
