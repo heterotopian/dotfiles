@@ -34,6 +34,7 @@
       "github-syntax"
     ]
   editor:
+    atomicSoftTabs: false
     fontFamily: "Menlo"
     invisibles: {}
     lineHeight: 1.3

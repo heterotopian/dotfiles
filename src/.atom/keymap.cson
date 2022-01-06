@@ -43,3 +43,9 @@
   'ctrl-w right': 'window:focus-pane-on-right'
   'ctrl-w up': 'window:focus-pane-above'
   'ctrl-w down': 'window:focus-pane-below'
+
+'atom-text-editor.vim-mode-plus:not(.insert-mode)':
+  'alt-h': 'custom:scroll-left-4'
+  'alt-j': 'custom:scroll-down-4'
+  'alt-k': 'custom:scroll-up-4'
+  'alt-l': 'custom:scroll-right-4'
