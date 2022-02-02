@@ -29,3 +29,5 @@
 	path = ~/.gitconfig.local
 [includeIf "gitdir:~/gitlab/"]
 	path = ~/.gitconfig.gitlab
+[fetch]
+	pruneTags = true
