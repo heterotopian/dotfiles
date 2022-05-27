@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+# Prevent man & env from interfering with each other
+
+man() {
+    LESS_TERMCAP_mb="${TERM_BOLD}${TERM_FG_CYAN}" \
+    LESS_TERMCAP_md="${TERM_BOLD}${TERM_FG_CYAN}" \
+    LESS_TERMCAP_me="${TERM_RESET}" \
+    LESS_TERMCAP_se="${TERM_RESET}" \
+    LESS_TERMCAP_ue="${TERM_RESET}" \
+    LESS_TERMCAP_us="${TERM_BOLD}${TERM_FG_YELLOW}" \
+    LESS_TERMCAP_so="${TERM_BOLD}${TERM_FG_WHITE}${TERM_BG_BLUE}" \
+    command man "$@"
+}
