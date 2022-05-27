@@ -79,7 +79,7 @@ man() {
 gitfetch() {
     git fetch --prune -v
     echo
-    git br
+    PAGER= git br
     echo
     git status
 }
