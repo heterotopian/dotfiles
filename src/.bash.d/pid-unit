@@ -1,0 +1,7 @@
+# Get systemd unit corresponding to PID
+
+pid-unit()
+{
+    local pid=$1
+    ps -o unit= "${pid}"
+}

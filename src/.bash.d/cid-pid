@@ -1,0 +1,7 @@
+# Get main container process ID from container ID
+
+cid-pid()
+{
+    local cid=$1
+    docker inspect -f '{{.State.Pid}}' "${cid}"
+}

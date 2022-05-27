@@ -1,3 +1,16 @@
+# Load drop-in configuration files
+
+if [ -d ~/.bash.d ]
+then
+    for file in ~/.bash.d/*
+    do
+        if [ -r "${file}" ]
+        then
+           . "${file}"
+        fi
+    done
+fi
+
 # Make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
@@ -66,7 +79,7 @@ man() {
 gitfetch() {
     git fetch --prune -v
     echo
-    git br
+    PAGER= git br
     echo
     git status
 }
@@ -76,6 +89,7 @@ cdtmp() {
 }
 
 # Enable 256 color support in terminal
+
 if [ -n "$DISPLAY" -a "$TERM" == "xterm" ]; then
     export TERM=xterm-256color
 fi
