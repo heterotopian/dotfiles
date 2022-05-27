@@ -1,3 +1,16 @@
+# Load drop-in configuration files
+
+if [ -d ~/.bashrc.d ]
+then
+    for file in ~/.bashrc.d/*
+    do
+        if [ -r "${file}" ]
+        then
+           . "${file}"
+        fi
+    done
+fi
+
 # Make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
@@ -76,6 +89,7 @@ cdtmp() {
 }
 
 # Enable 256 color support in terminal
+
 if [ -n "$DISPLAY" -a "$TERM" == "xterm" ]; then
     export TERM=xterm-256color
 fi
