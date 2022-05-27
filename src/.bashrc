@@ -1,8 +1,8 @@
 # Load drop-in configuration files
 
-if [ -d ~/.bashrc.d ]
+if [ -d ~/.bash.d ]
 then
-    for file in ~/.bashrc.d/*
+    for file in ~/.bash.d/*
     do
         if [ -r "${file}" ]
         then
