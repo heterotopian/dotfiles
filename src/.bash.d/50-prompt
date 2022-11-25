@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# Customize bash prompt
+
+parse_git_branch() {
+    cur_branch=$(git branch --no-color 2> /dev/null | fgrep '*' | sed 's/* //')
+    [ ${#cur_branch} -gt 0 ] && echo "(git:$cur_branch) "
+}
+
+export PS1="\[\e[1;32m\]\u@\h\[\e[m\] \[\e[1;34m\]\w\[\e[m\] \[\e[1;31m\]\$(parse_git_branch)\[\e[m\]$ "
