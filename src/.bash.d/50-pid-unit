@@ -1,8 +1,7 @@
 #!/usr/bin/env bash
 # Get systemd unit corresponding to PID
 
-pid-unit()
-{
+pid-unit() {
     local pid=$1
     ps -o unit= "${pid}"
 }
