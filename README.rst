@@ -1,33 +1,29 @@
 
-============
-dotfiles-new
-============
+========
+dotfiles
+========
 
 .. highlight:: console
 
 Personal dotfiles manager.
 
-Deploy files into homedir
-=========================
+Install repository files into home directory
+============================================
 
 ::
 
     $ make install
 
-
-
-Copy deployed files from homedir into repository
-================================================
+Install repository files into local test directory
+==================================================
 
 ::
 
-    $ make import
+    $ make install-test
 
-
-
-Delete deployed files in homedir
-================================
+Clean test directory
+====================
 
 ::
 
-    $ make uninstall
+    $ make clean
