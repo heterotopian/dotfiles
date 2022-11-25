@@ -2,7 +2,7 @@
 # Customize bash prompt
 
 parse_git_branch() {
-    cur_branch=$(git branch --no-color 2> /dev/null | fgrep '*' | sed 's/* //')
+    local cur_branch=$(git branch --no-color 2> /dev/null | fgrep '*' | sed 's/* //')
     [ ${#cur_branch} -gt 0 ] && echo "(git:$cur_branch) "
 }
 
