@@ -17,7 +17,7 @@ duotone-light-blue-syntax@1.0.1
 duotone-light-syntax@2.1.0
 duotone-stark-sea-syntax@2.1.0-6
 ex-mode@0.18.0
-file-icons@2.1.46
+file-icons@2.1.47
 firewatch-syntax@1.1.1
 git-plus@8.7.1
 github-atom-light-syntax@0.5.0
@@ -50,4 +50,3 @@ tone-syntax@0.2.2
 tree-view-scope-lines@0.2.0
 vim-mode-plus@1.36.7
 vim-mode-plus-keymaps-for-surround@0.2.1
-
