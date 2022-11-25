@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 # Use Vim as readline editor
 
-export editor=vim
+export EDITOR=vim
+export VISUAL=vim
 set -o vi
