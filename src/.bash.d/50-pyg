@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# Display file contents with syntax highlighting
+
+pyg() {
+    if ! pygmentize -f terminal "$@" 2>/dev/null
+    then
+        pygmentize -f terminal -l bash "$@"
+    fi
+}
