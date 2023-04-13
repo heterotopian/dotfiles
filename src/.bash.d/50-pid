@@ -5,3 +5,10 @@ cid-pid() {
     local cid=$1
     docker inspect -f '{{.State.Pid}}' "${cid}"
 }
+
+# Get systemd unit corresponding to PID
+
+pid-unit() {
+    local pid=$1
+    ps -o unit= "${pid}"
+}
