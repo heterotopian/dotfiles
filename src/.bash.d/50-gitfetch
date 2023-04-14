@@ -2,7 +2,7 @@
 # Convenience wrapper for `git fetch`
 
 gitfetch() {
-   git fetch --prune -v
+   PAGER= git fetch --prune -v
    echo
-   git br
+   PAGER= git br
 }
