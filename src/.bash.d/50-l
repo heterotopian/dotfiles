@@ -2,28 +2,17 @@
 # Convenience wrapper for using `ls` and `less` interactively
 
 l() {
-    if [[ $# -eq 0 ]]
-    then
-        # argcount: 0
-        ls -lhA --color
-    elif [[ $# -eq 1 ]]
+    if [[ $# -eq 1 ]] && [[ -f "${1}" ]]
     then
         # argcount: 1
-        if [[ -f "${1}" ]]
+        # argtype: regular file
+        local cat="cat"
+        if command -v pyg &>/dev/null
         then
-            # regular file
-            local cat="cat"
-            if command -v pyg &>/dev/null
-            then
-                cat="pyg"
-            fi
-            "${cat}" "${1}" | less -RF
-        else
-            # not a regular file
-            ls -lhA --color "${1}"
+            cat="pyg"
         fi
+        "${cat}" "${1}" | less -RF
     else
-        # argcount: >1
         ls -lhA --color "$@"
     fi
 }
