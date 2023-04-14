@@ -12,12 +12,10 @@ l() {
         if [[ -f "${1}" ]]
         then
             # regular file
-            local cat
+            local cat="cat"
             if command -v pyg &>/dev/null
             then
                 cat="pyg"
-            else
-                cat="cat"
             fi
             "${cat}" "${1}" | less -RF
         else
