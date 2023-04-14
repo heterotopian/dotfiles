@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# Convenience wrapper for `git fetch`
+
+gitfetch() {
+   git fetch --prune -v
+   echo
+   git br
+}
