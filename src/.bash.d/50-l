@@ -5,7 +5,7 @@ l() {
     if [[ $# -eq 0 ]]
     then
         # argcount: 0
-        ls -lh --color
+        ls -lhA --color
     elif [[ $# -eq 1 ]]
     then
         # argcount: 1
@@ -20,11 +20,10 @@ l() {
             "${cat}" "${1}" | less -RF
         else
             # not a regular file
-            ls -lh --color "${1}"
+            ls -lhA --color "${1}"
         fi
-
     else
         # argcount: >1
-        ls -lh --color "$@"
+        ls -lhA --color "$@"
     fi
 }
