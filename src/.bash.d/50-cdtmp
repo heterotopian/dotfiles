@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# Convenience wrapper to create a tmp directory with `mktemp` then `cd` into it
+
+cdtmp() {
+    cd "$(mktemp -d)"
+}
