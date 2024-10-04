@@ -10,28 +10,19 @@ Personal dotfiles manager.
 Usage
 =====
 
-Install repository files into home directory
---------------------------------------------
-
-::
-
-    $ make install
-
-
-Install repository files into local test directory
---------------------------------------------------
-
-::
-
-    $ make install-test
-
-
-Clean test directory
---------------------
-
-::
+Clean generated files::
 
     $ make clean
+
+Install repository files::
+
+    $ make install           # Home directory
+    $ make install-test      # Test directory
+
+Dry run, show rsync changes required for install::
+
+    $ make preview           # Home directory
+    $ make preview-test      # Test directory
 
 
 
