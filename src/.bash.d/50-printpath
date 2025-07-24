@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# Convenience wrapper for printing PATH segments on separate lines
+
+splitpath() {
+    tr ':' '\n'
+}
+
+printpath() {
+    printenv PATH | splitpath
+}
