@@ -5,6 +5,8 @@ HOMEDIR     = $(shell cd && pwd)
 TEMPDIR     = tmp
 INSTALL_CMD = rsync -avP -i --stats "$(SOURCE)/" "$(TARGET)"
 
+-include Makefile.override
+
 # Targets
 
 INSTALLS = install install-test
