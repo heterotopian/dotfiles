@@ -1,0 +1,17 @@
+# Targets
+
+.PHONY: install-partial install-partial-test
+
+install-partial: TARGET = $(HOMEDIR)
+install-partial:
+	rsync -avP -i --stats "$(SOURCE)/.bash.d/" "$(TARGET)/.bash.d"
+	rsync -avP -i --stats "$(SOURCE)/.vim/" "$(TARGET)/.vim"
+	rsync -avP -i --stats "$(SOURCE)/.vimrc" "$(TARGET)/.vimrc"
+	rsync -avP -i --stats "$(SOURCE)/.gvimrc" "$(TARGET)/.gvimrc"
+
+install-partial-test: TARGET = $(TEMPDIR)
+install-partial-test: $(TEMPDIR)
+	rsync -avP -i --stats "$(SOURCE)/.bash.d/" "$(TARGET)/.bash.d"
+	rsync -avP -i --stats "$(SOURCE)/.vim/" "$(TARGET)/.vim"
+	rsync -avP -i --stats "$(SOURCE)/.vimrc" "$(TARGET)/.vimrc"
+	rsync -avP -i --stats "$(SOURCE)/.gvimrc" "$(TARGET)/.gvimrc"
