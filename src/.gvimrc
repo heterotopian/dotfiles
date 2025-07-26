@@ -14,7 +14,11 @@ if has('win32')
     set guioptions+=m
 else
     " Font
-    set guifont=Ubuntu\ Mono\ for\ Powerline\ 12
+    "set guifont=Ubuntu\ Mono\ for\ Powerline\ 12
+    
+    set guifont=Menlo-Regular:h12
+    set linespace=1
+    
 endif
 
 " Color scheme
