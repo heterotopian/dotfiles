@@ -1,33 +1,37 @@
 # Variables
 
-RSYNC_OPTIONS =
+DOINSTALLPART_OPTIONS = SOURCE=$(SOURCE) TARGET=$(TARGET) RSYNC_OPTIONS=$(RSYNC_OPTIONS)
+
+# Compound targets
+
+INSTALLS += installpart installpart-test
+PREVIEWS += previewpart previewpart-test
 
 # Targets
 
-.PHONY: install-partial install-partial-test preview-partial preview-partial-test do-install-partial
+.PHONY: do-installpart
 
-install-partial: TARGET = $(HOMEDIR)
-install-partial:
-	$(MAKE) do-install-partial SOURCE=$(SOURCE) TARGET=$(TARGET) RSYNC_OPTIONS=$(RSYNC_OPTIONS)
+installpart: TARGET = $(HOMEDIR)
+installpart: info
+	$(MAKE) do-installpart SOURCE=$(SOURCE) TARGET=$(TARGET) RSYNC_OPTIONS=$(RSYNC_OPTIONS)
 
-install-partial-test: TARGET = $(TEMPDIR)
-install-partial-test:
-	$(MAKE) do-install-partial SOURCE=$(SOURCE) TARGET=$(TARGET) RSYNC_OPTIONS=$(RSYNC_OPTIONS)
+installpart-test: TARGET = $(TEMPDIR)
+installpart-test: info $(TEMPDIR)
+	$(MAKE) do-installpart $(DOINSTALLPART_OPTIONS)
 
-preview-partial: TARGET = $(HOMEDIR)
-preview-partial: RSYNC_OPTIONS = --dry-run
-preview-partial:
-	$(MAKE) do-install-partial SOURCE=$(SOURCE) TARGET=$(TARGET) RSYNC_OPTIONS=$(RSYNC_OPTIONS)
+previewpart: TARGET = $(HOMEDIR)
+previewpart: RSYNC_OPTIONS = --dry-run
+previewpart: info
+	$(MAKE) do-installpart $(DOINSTALLPART_OPTIONS)
 
-preview-partial-test: TARGET = $(TEMPDIR)
-preview-partial-test: RSYNC_OPTIONS = --dry-run
-preview-partial-test:
-	$(MAKE) do-install-partial SOURCE=$(SOURCE) TARGET=$(TARGET) RSYNC_OPTIONS=$(RSYNC_OPTIONS)
+previewpart-test: TARGET = $(TEMPDIR)
+previewpart-test: RSYNC_OPTIONS = --dry-run
+previewpart-test: info $(TEMPDIR)
+	$(MAKE) do-installpart $(DOINSTALLPART_OPTIONS)
 
-do-install-partial:
-	rsync -avP -i --stats "$(SOURCE)/.bash.d/" "$(TARGET)/.bash.d" $(RSYNC_OPTIONS)
-	rsync -avP -i --stats "$(SOURCE)/.vim/" "$(TARGET)/.vim" $(RSYNC_OPTIONS)
-	rsync -avP -i --stats "$(SOURCE)/.vimrc" "$(TARGET)/.vimrc" $(RSYNC_OPTIONS)
-	rsync -avP -i --stats "$(SOURCE)/.gvimrc" "$(TARGET)/.gvimrc" $(RSYNC_OPTIONS)
-	rsync -avP -i --stats "$(SOURCE)/.atom/" "$(TARGET)/.atom" $(RSYNC_OPTIONS)
-
+do-installpart:
+	$(RSYNC_CMD) "$(SOURCE)/.bash.d/" "$(TARGET)/.bash.d" $(RSYNC_OPTIONS)
+	$(RSYNC_CMD) "$(SOURCE)/.vim/" "$(TARGET)/.vim" $(RSYNC_OPTIONS)
+	$(RSYNC_CMD) "$(SOURCE)/.vimrc" "$(TARGET)/.vimrc" $(RSYNC_OPTIONS)
+	$(RSYNC_CMD) "$(SOURCE)/.gvimrc" "$(TARGET)/.gvimrc" $(RSYNC_OPTIONS)
+	$(RSYNC_CMD) "$(SOURCE)/.atom/" "$(TARGET)/.atom" $(RSYNC_OPTIONS)

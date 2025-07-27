@@ -1,37 +1,48 @@
 # Variables
 
-SOURCE      = src
-HOMEDIR     = $(shell cd && pwd)
-TEMPDIR     = tmp
-INSTALL_CMD = rsync -avP -i --stats "$(SOURCE)/" "$(TARGET)"
+SOURCE        = src
+HOMEDIR       = $(shell cd && pwd)
+TEMPDIR       = tmp
+RSYNC_CMD     = rsync -avP -i --stats
+RSYNC_OPTIONS =
+
+# Compound targets
+
+INSTALLS = install install-test
+PREVIEWS = preview preview-test
 
 -include Makefile.override
 
 # Targets
 
-INSTALLS = install install-test
-PREVIEWS = preview preview-test
-
-.PHONY: clean $(INSTALLS) $(PREVIEWS)
+.PHONY: clean info $(INSTALLS) $(PREVIEWS)
 
 clean:
 	rm -rf $(TEMPDIR)
 
+info:
+	@echo SOURCE=$(SOURCE)
+	@echo TARGET=$(TARGET)
+	@echo INSTALLS=$(INSTALLS)
+	@echo PREVIEWS=$(PREVIEWS)
+
 install: TARGET = $(HOMEDIR)
-install:
-	$(INSTALL_CMD)
+install: info
+	$(RSYNC_CMD) "$(SOURCE)/" "$(TARGET)" $(RSYNC_OPTIONS)
 
 install-test: TARGET = $(TEMPDIR)
-install-test: $(TEMPDIR)
-	$(INSTALL_CMD)
+install-test: info $(TEMPDIR)
+	$(RSYNC_CMD) "$(SOURCE)/" "$(TARGET)" $(RSYNC_OPTIONS)
 
 preview: TARGET = $(HOMEDIR)
-preview:
-	$(INSTALL_CMD) --dry-run
+preview: RSYNC_OPTIONS = --dry-run
+preview: info
+	$(RSYNC_CMD) "$(SOURCE)/" "$(TARGET)" $(RSYNC_OPTIONS)
 
 preview-test: TARGET = $(TEMPDIR)
-preview-test: $(TEMPDIR)
-	$(INSTALL_CMD) --dry-run
+preview-test: RSYNC_OPTIONS = --dry-run
+preview-test: info $(TEMPDIR)
+	$(RSYNC_CMD) "$(SOURCE)/" "$(TARGET)" $(RSYNC_OPTIONS)
 
 $(TEMPDIR):
 	mkdir -p $(TEMPDIR)
