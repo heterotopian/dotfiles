@@ -1,17 +1,33 @@
+# Variables
+
+RSYNC_OPTIONS =
+
 # Targets
 
-.PHONY: install-partial install-partial-test
+.PHONY: install-partial install-partial-test preview-partial preview-partial-test do-install-partial
 
 install-partial: TARGET = $(HOMEDIR)
 install-partial:
-	rsync -avP -i --stats "$(SOURCE)/.bash.d/" "$(TARGET)/.bash.d"
-	rsync -avP -i --stats "$(SOURCE)/.vim/" "$(TARGET)/.vim"
-	rsync -avP -i --stats "$(SOURCE)/.vimrc" "$(TARGET)/.vimrc"
-	rsync -avP -i --stats "$(SOURCE)/.gvimrc" "$(TARGET)/.gvimrc"
+	$(MAKE) do-install-partial SOURCE=$(SOURCE) TARGET=$(TARGET) RSYNC_OPTIONS=$(RSYNC_OPTIONS)
 
 install-partial-test: TARGET = $(TEMPDIR)
-install-partial-test: $(TEMPDIR)
-	rsync -avP -i --stats "$(SOURCE)/.bash.d/" "$(TARGET)/.bash.d"
-	rsync -avP -i --stats "$(SOURCE)/.vim/" "$(TARGET)/.vim"
-	rsync -avP -i --stats "$(SOURCE)/.vimrc" "$(TARGET)/.vimrc"
-	rsync -avP -i --stats "$(SOURCE)/.gvimrc" "$(TARGET)/.gvimrc"
+install-partial-test:
+	$(MAKE) do-install-partial SOURCE=$(SOURCE) TARGET=$(TARGET) RSYNC_OPTIONS=$(RSYNC_OPTIONS)
+
+preview-partial: TARGET = $(HOMEDIR)
+preview-partial: RSYNC_OPTIONS = --dry-run
+preview-partial:
+	$(MAKE) do-install-partial SOURCE=$(SOURCE) TARGET=$(TARGET) RSYNC_OPTIONS=$(RSYNC_OPTIONS)
+
+preview-partial-test: TARGET = $(TEMPDIR)
+preview-partial-test: RSYNC_OPTIONS = --dry-run
+preview-partial-test:
+	$(MAKE) do-install-partial SOURCE=$(SOURCE) TARGET=$(TARGET) RSYNC_OPTIONS=$(RSYNC_OPTIONS)
+
+do-install-partial:
+	rsync -avP -i --stats "$(SOURCE)/.bash.d/" "$(TARGET)/.bash.d" $(RSYNC_OPTIONS)
+	rsync -avP -i --stats "$(SOURCE)/.vim/" "$(TARGET)/.vim" $(RSYNC_OPTIONS)
+	rsync -avP -i --stats "$(SOURCE)/.vimrc" "$(TARGET)/.vimrc" $(RSYNC_OPTIONS)
+	rsync -avP -i --stats "$(SOURCE)/.gvimrc" "$(TARGET)/.gvimrc" $(RSYNC_OPTIONS)
+	rsync -avP -i --stats "$(SOURCE)/.atom/" "$(TARGET)/.atom" $(RSYNC_OPTIONS)
+

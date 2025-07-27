@@ -34,6 +34,7 @@
       "github-syntax"
     ]
   editor:
+    fontSize: 12
     atomicSoftTabs: false
     invisibles: {}
     lineHeight: 1.3
