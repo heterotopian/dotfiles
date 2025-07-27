@@ -34,12 +34,12 @@ install-test: TARGET = $(TEMPDIR)
 install-test: info $(TEMPDIR)
 	$(RSYNC_CMD) "$(SOURCE)/" "$(TARGET)" $(RSYNC_OPTIONS)
 
-preview: TARGET = $(HOMEDIR)
+preview: TARGET        = $(HOMEDIR)
 preview: RSYNC_OPTIONS = --dry-run
 preview: info
 	$(RSYNC_CMD) "$(SOURCE)/" "$(TARGET)" $(RSYNC_OPTIONS)
 
-preview-test: TARGET = $(TEMPDIR)
+preview-test: TARGET        = $(TEMPDIR)
 preview-test: RSYNC_OPTIONS = --dry-run
 preview-test: info $(TEMPDIR)
 	$(RSYNC_CMD) "$(SOURCE)/" "$(TARGET)" $(RSYNC_OPTIONS)

@@ -13,18 +13,18 @@ PREVIEWS += previewpart previewpart-test
 
 installpart: TARGET = $(HOMEDIR)
 installpart: info
-	$(MAKE) do-installpart SOURCE=$(SOURCE) TARGET=$(TARGET) RSYNC_OPTIONS=$(RSYNC_OPTIONS)
+	$(MAKE) do-installpart $(DOINSTALLPART_OPTIONS)
 
 installpart-test: TARGET = $(TEMPDIR)
 installpart-test: info $(TEMPDIR)
 	$(MAKE) do-installpart $(DOINSTALLPART_OPTIONS)
 
-previewpart: TARGET = $(HOMEDIR)
+previewpart: TARGET        = $(HOMEDIR)
 previewpart: RSYNC_OPTIONS = --dry-run
 previewpart: info
 	$(MAKE) do-installpart $(DOINSTALLPART_OPTIONS)
 
-previewpart-test: TARGET = $(TEMPDIR)
+previewpart-test: TARGET        = $(TEMPDIR)
 previewpart-test: RSYNC_OPTIONS = --dry-run
 previewpart-test: info $(TEMPDIR)
 	$(MAKE) do-installpart $(DOINSTALLPART_OPTIONS)
