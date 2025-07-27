@@ -117,7 +117,12 @@
     "colorscheme ir_black
 
     "colorscheme github
-    colorscheme ir_black
+    "colorscheme ir_black
+    "colorscheme zaibatsu
+
+    set background=dark
+    colorscheme lunaperche
+
 
     " Map Alt- to the same behavior in vim and gvim
     let c='a'
