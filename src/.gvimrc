@@ -22,10 +22,8 @@ else
 endif
 
 " Color scheme
-set background=dark
-colorscheme solarized
+"set background=dark
+"colorscheme solarized
 
-" Source ~/.gvimrc.local if it exists
-if filereadable($HOME."/.gvimrc.local")
-    source $HOME/.gvimrc.local
-endif
+set background=light
+colorscheme lunaperche
