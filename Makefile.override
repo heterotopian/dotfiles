@@ -30,8 +30,8 @@ previewpart-test: info $(TEMPDIR)
 	$(MAKE) do-installpart $(DOINSTALLPART_OPTIONS)
 
 do-installpart:
+	$(RSYNC_CMD) "$(SOURCE)/.atom/" "$(TARGET)/.atom" $(RSYNC_OPTIONS)
 	$(RSYNC_CMD) "$(SOURCE)/.bash.d/" "$(TARGET)/.bash.d" $(RSYNC_OPTIONS)
 	$(RSYNC_CMD) "$(SOURCE)/.vim/" "$(TARGET)/.vim" $(RSYNC_OPTIONS)
 	$(RSYNC_CMD) "$(SOURCE)/.vimrc" "$(TARGET)/.vimrc" $(RSYNC_OPTIONS)
 	$(RSYNC_CMD) "$(SOURCE)/.gvimrc" "$(TARGET)/.gvimrc" $(RSYNC_OPTIONS)
-	$(RSYNC_CMD) "$(SOURCE)/.atom/" "$(TARGET)/.atom" $(RSYNC_OPTIONS)
