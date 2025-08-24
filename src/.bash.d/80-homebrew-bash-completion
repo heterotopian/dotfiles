@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# Load completions from homebrew package `bash-completion`
+# https://salsa.debian.org/debian/bash-completion
+# https://github.com/scop/bash-completion
+
+if [[ -s ${HOMEBREW_PREFIX}/etc/profile.d/bash_completion.sh ]]
+then
+    . "${HOMEBREW_PREFIX}/etc/profile.d/bash_completion.sh"
+fi
