@@ -1,10 +1,11 @@
 # Variables
 
-SOURCE        = src
-HOMEDIR       = $(shell cd && pwd)
-TEMPDIR       = tmp
-RSYNC_CMD     = rsync -avP -i --stats
-RSYNC_OPTIONS =
+SOURCE          = src
+HOMEDIR         = $(shell cd && pwd)
+TEMPDIR         = tmp
+RSYNC_COMMAND   = rsync -avP -i --stats
+RSYNC_OPTIONS   =
+INSTALL_COMMAND = $(RSYNC_COMMAND) "$(SOURCE)/" "$(TARGET)" $(RSYNC_OPTIONS)
 
 # Compound targets
 
@@ -25,24 +26,37 @@ info:
 	@echo TARGET=$(TARGET)
 	@echo INSTALLS=$(INSTALLS)
 	@echo PREVIEWS=$(PREVIEWS)
+	@echo RSYNC_COMMAND=$(RSYNC_COMMAND)
+	@echo RSYNC_OPTIONS=$(RSYNC_OPTIONS)
+	@echo INSTALL_COMMAND=$(INSTALL_COMMAND)
+	@echo DOINSTALLPARTIAL_COMMAND=$(DOINSTALLPARTIAL_COMMAND)
+	@echo 
+
+$(TEMPDIR):
+	mkdir -p $(TEMPDIR)
+
+## Install into homedir
 
 install: TARGET = $(HOMEDIR)
 install: info
-	$(RSYNC_CMD) "$(SOURCE)/" "$(TARGET)" $(RSYNC_OPTIONS)
+	$(INSTALL_COMMAND)
 
-install-test: TARGET = $(TEMPDIR)
-install-test: info $(TEMPDIR)
-	$(RSYNC_CMD) "$(SOURCE)/" "$(TARGET)" $(RSYNC_OPTIONS)
+## Install into homedir (preview)
 
 preview: TARGET        = $(HOMEDIR)
 preview: RSYNC_OPTIONS = --dry-run
 preview: info
-	$(RSYNC_CMD) "$(SOURCE)/" "$(TARGET)" $(RSYNC_OPTIONS)
+	$(INSTALL_COMMAND)
+
+## Install into tempdir
+
+install-test: TARGET = $(TEMPDIR)
+install-test: info $(TEMPDIR)
+	$(INSTALL_COMMAND)
+
+## Install into tempdir (preview)
 
 preview-test: TARGET        = $(TEMPDIR)
 preview-test: RSYNC_OPTIONS = --dry-run
 preview-test: info $(TEMPDIR)
-	$(RSYNC_CMD) "$(SOURCE)/" "$(TARGET)" $(RSYNC_OPTIONS)
-
-$(TEMPDIR):
-	mkdir -p $(TEMPDIR)
+	$(INSTALL_COMMAND)

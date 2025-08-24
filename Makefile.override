@@ -1,6 +1,6 @@
 # Variables
 
-DOINSTALLPART_OPTIONS = SOURCE=$(SOURCE) TARGET=$(TARGET) RSYNC_OPTIONS=$(RSYNC_OPTIONS)
+DOINSTALLPARTIAL_COMMAND = $(MAKE) do-installpart SOURCE=$(SOURCE) TARGET=$(TARGET) RSYNC_OPTIONS=$(RSYNC_OPTIONS)
 
 # Compound targets
 
@@ -11,27 +11,35 @@ PREVIEWS += previewpart previewpart-test
 
 .PHONY: do-installpart
 
+do-installpart:
+	$(RSYNC_COMMAND) "$(SOURCE)/.atom/" "$(TARGET)/.atom" $(RSYNC_OPTIONS)
+	$(RSYNC_COMMAND) "$(SOURCE)/.bash.d/" "$(TARGET)/.bash.d" $(RSYNC_OPTIONS)
+	$(RSYNC_COMMAND) "$(SOURCE)/.vim/" "$(TARGET)/.vim" $(RSYNC_OPTIONS)
+	$(RSYNC_COMMAND) "$(SOURCE)/.vimrc" "$(TARGET)/.vimrc" $(RSYNC_OPTIONS)
+	$(RSYNC_COMMAND) "$(SOURCE)/.gvimrc" "$(TARGET)/.gvimrc" $(RSYNC_OPTIONS)
+
+## Partial install into homedir
+
 installpart: TARGET = $(HOMEDIR)
 installpart: info
-	$(MAKE) do-installpart $(DOINSTALLPART_OPTIONS)
+	$(DOINSTALLPARTIAL_COMMAND)
 
-installpart-test: TARGET = $(TEMPDIR)
-installpart-test: info $(TEMPDIR)
-	$(MAKE) do-installpart $(DOINSTALLPART_OPTIONS)
+## Partial install into homedir (preview)
 
 previewpart: TARGET        = $(HOMEDIR)
 previewpart: RSYNC_OPTIONS = --dry-run
 previewpart: info
-	$(MAKE) do-installpart $(DOINSTALLPART_OPTIONS)
+	$(DOINSTALLPARTIAL_COMMAND)
+
+## Partial install into tempdir
+
+installpart-test: TARGET = $(TEMPDIR)
+installpart-test: info $(TEMPDIR)
+	$(DOINSTALLPARTIAL_COMMAND)
+
+## Partial install into tempdir (preview)
 
 previewpart-test: TARGET        = $(TEMPDIR)
 previewpart-test: RSYNC_OPTIONS = --dry-run
 previewpart-test: info $(TEMPDIR)
-	$(MAKE) do-installpart $(DOINSTALLPART_OPTIONS)
-
-do-installpart:
-	$(RSYNC_CMD) "$(SOURCE)/.atom/" "$(TARGET)/.atom" $(RSYNC_OPTIONS)
-	$(RSYNC_CMD) "$(SOURCE)/.bash.d/" "$(TARGET)/.bash.d" $(RSYNC_OPTIONS)
-	$(RSYNC_CMD) "$(SOURCE)/.vim/" "$(TARGET)/.vim" $(RSYNC_OPTIONS)
-	$(RSYNC_CMD) "$(SOURCE)/.vimrc" "$(TARGET)/.vimrc" $(RSYNC_OPTIONS)
-	$(RSYNC_CMD) "$(SOURCE)/.gvimrc" "$(TARGET)/.gvimrc" $(RSYNC_OPTIONS)
+	$(DOINSTALLPARTIAL_COMMAND)
