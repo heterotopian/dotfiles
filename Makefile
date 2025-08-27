@@ -1,6 +1,6 @@
 # Variables
 
-SRCDIR       = src.stow
+SRCDIR       = src
 HOMEDIR      = ~
 TEMPDIR      = tmp
 UNFOLDS      = .atom .config
