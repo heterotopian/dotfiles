@@ -1,2 +1,0 @@
-#!/bin/bash
-nohup vboxheadless -s ${1} &> /dev/null &

@@ -70,14 +70,6 @@
 	path = src/vim/.vim/bundle/vim-colors-solarized
 	url = http://github.com/altercation/vim-colors-solarized
 	ignore = dirty
-[submodule "src/.fonts/ubuntu-mono-powerline"]
-	path = src.prestow/.fonts/ubuntu-mono-powerline
-	url = http://github.com/scotu/ubuntu-mono-powerline
-	ignore = dirty
-[submodule "src/.fonts/ubuntu-mono-powerline-ttf"]
-	path = src.prestow/.fonts/ubuntu-mono-powerline-ttf
-	url = http://github.com/pdf/ubuntu-mono-powerline-ttf
-	ignore = dirty
 [submodule "src/.vim/bundle/vim-bundle-mako"]
 	path = src/vim/.vim/bundle/vim-bundle-mako
 	url = http://github.com/sophacles/vim-bundle-mako
@@ -89,10 +81,6 @@
 [submodule "src/.vim/bundle/vim-surround"]
 	path = src/vim/.vim/bundle/vim-surround
 	url = http://github.com/tpope/vim-surround
-	ignore = dirty
-[submodule "src/color/gnome-terminal-colors-solariezed"]
-	path = src.prestow/color/gnome-terminal-colors-solariezed
-	url = http://github.com/sigurdga/gnome-terminal-colors-solarized
 	ignore = dirty
 [submodule "src/.vim/bundle/vim-hy"]
 	path = src/vim/.vim/bundle/vim-hy
@@ -113,14 +101,6 @@
 [submodule "src/.vim/bundle/flatui.vim"]
 	path = src/vim/.vim/bundle/flatui.vim
 	url = http://github.com/john2x/flatui.vim
-	ignore = dirty
-[submodule "src/.fonts/Menlo-for-Powerline"]
-	path = src.prestow/.fonts/Menlo-for-Powerline
-	url = http://github.com/abertsch/Menlo-for-Powerline
-	ignore = dirty
-[submodule "src/color/one-gnome-terminal"]
-	path = src.prestow/color/one-gnome-terminal
-	url = https://github.com/denysdovhan/one-gnome-terminal
 	ignore = dirty
 [submodule "src/.vim/bundle/Dockerfile.vim"]
 	path = src/vim/.vim/bundle/Dockerfile.vim
@@ -144,9 +124,5 @@
 	ignore = dirty
 [submodule "FiraCode"]
 	path = FiraCode
-	url = git@github.com:tonsky/FiraCode
-	ignore = dirty
-[submodule "src/.fonts/FiraMono"]
-	path = src.prestow/.fonts/FiraMono
 	url = git@github.com:tonsky/FiraCode
 	ignore = dirty
