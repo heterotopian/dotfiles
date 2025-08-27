@@ -23,8 +23,6 @@
 	gr = log --graph -n10
 	pullall = !git pull && git submodule update --init --recursive
 	cloneall = "!f() { git clone --recurse-submodules \"$@\"; }; f"
-[submodule]
-	recurse = true
 [include]
 	path = ~/.gitconfig.local
 [includeIf "gitdir:~/gitlab/"]
