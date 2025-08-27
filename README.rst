@@ -37,12 +37,12 @@ Re-initialize tempdir from homedir::
 src/
 ----
 
-atom/
-=====
+atom
+====
 
 
-bash/
-=====
+bash
+====
 
 .bash.d/
 --------
@@ -62,13 +62,13 @@ Load fragments from ``.bashrc``::
     fi
 
 
-git/
+git
+===
+
+
+tmux
 ====
 
 
-tmux/
-=====
-
-
-vim/
-====
+vim
+===
