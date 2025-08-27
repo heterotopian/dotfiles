@@ -6,7 +6,7 @@ TEMPDIR      = tmp
 UNFOLDS      = .atom .config
 STOWPACKAGES = atom bash git tmux vim
 
-TARGETDIR    = $(TEMPDIR)
+TARGETDIR    = $(HOMEDIR)
 TARGETDIRS   = $(TARGETDIR) $(addprefix $(TARGETDIR)/,$(UNFOLDS))
 
 # Targets
@@ -36,7 +36,7 @@ install: $(TARGETDIRS)
 	stow -d $(SRCDIR) -t $(TARGETDIR) -v $(STOWPACKAGES)
 
 delete: $(TARGETDIRS)
-	stow -d $(SRCDIR) -t $(TARGETDIR) -v -n --delete $(STOWPACKAGES)
+	stow -d $(SRCDIR) -t $(TARGETDIR) -v --delete $(STOWPACKAGES)
 
 update: $(TARGETDIRS)
-	stow -d $(SRCDIR) -t $(TARGETDIR) -v -n --restow $(STOWPACKAGES)
+	stow -d $(SRCDIR) -t $(TARGETDIR) -v --restow $(STOWPACKAGES)
