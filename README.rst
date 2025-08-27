@@ -35,7 +35,7 @@ Prepare homedir for stow by setting aside existing files::
 
     find .atom/{config.cson,init.coffee,keymap.cson,packages.list,styles.less} .bash.d .vim .gitconfig .gitignore .gvimrc .tmux.conf .vimrc -maxdepth 0 -mindepth 0 | while read existing; do mv "${existing}" "${existing}.prestow"; done
 
-s
+
 
 -------------
 Stow Packages
@@ -52,6 +52,7 @@ bash
 --------
 
 Drop-in directory for Bash configuration fragments.
+
 Load fragments from ``.bashrc``::
 
     if [ -d ~/.bash.d ]
