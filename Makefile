@@ -13,7 +13,7 @@ TARGETDIRS   = $(TARGETDIR) $(addprefix $(TARGETDIR)/,$(UNFOLDS))
 
 .DEFAULT_GOAL = info
 
-.PHONY: info clean preview install
+.PHONY: info clean preview install delete update
 
 $(TARGETDIRS):
 	mkdir -p $@
@@ -34,3 +34,9 @@ preview: $(TARGETDIRS)
 
 install: $(TARGETDIRS)
 	stow -d $(SRCDIR) -t $(TARGETDIR) -v $(STOWPACKAGES)
+
+delete: $(TARGETDIRS)
+	stow -d $(SRCDIR) -t $(TARGETDIR) -v -n --delete $(STOWPACKAGES)
+
+update: $(TARGETDIRS)
+	stow -d $(SRCDIR) -t $(TARGETDIR) -v -n --restow $(STOWPACKAGES)
