@@ -33,9 +33,9 @@ Re-initialize tempdir from homedir::
 
 
 
-----
-src/
-----
+-------------
+Stow Packages
+-------------
 
 atom
 ====
