@@ -1,4 +1,0 @@
-#!/bin/bash
-args_without_last=${@:1:${#}-1}
-last_argument=${@:$#:1}
-find ${args_without_last} -type f -iname "*${last_argument}*"

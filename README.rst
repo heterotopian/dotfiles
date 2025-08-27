@@ -3,39 +3,56 @@
 dotfiles
 ========
 
-.. highlight:: console
-
 Personal dotfiles manager.
 
+-----
 Usage
-=====
+-----
 
-Clean generated files::
+::
 
+    $ make info
     $ make clean
-
-Install repository files::
-
-    $ make install           # Home directory
-    $ make install-test      # Test directory
-
-Dry run, show rsync changes required for install::
-
-    $ make preview           # Home directory
-    $ make preview-test      # Test directory
+    $ make preview
+    $ make install
+    $ make delete
+    $ make update
 
 
 
-Contents
-========
+-----
+Notes
+-----
 
-src/
-----
+Re-initialize tempdir from homedir::
+
+    make clean
+    make tmp
+    cp -R ~/.atom tmp
+    rm -f tmp/.atom/{config.cson,init.coffee,keymap.cson,packages.list,styles.less}
+
+Prepare homedir for stow by setting aside existing files::
+
+    find .atom/{config.cson,init.coffee,keymap.cson,packages.list,styles.less} .bash.d .vim .gitconfig .gitignore .gvimrc .tmux.conf .vimrc -maxdepth 0 -mindepth 0 | while read existing; do mv "${existing}" "${existing}.prestow"; done
+
+
+
+-------------
+Stow Packages
+-------------
+
+atom
+====
+
+
+bash
+====
 
 .bash.d/
-~~~~~~~~
+--------
 
 Drop-in directory for Bash configuration fragments.
+
 Load fragments from ``.bashrc``::
 
     if [ -d ~/.bash.d ]
@@ -48,3 +65,15 @@ Load fragments from ``.bashrc``::
             fi
         done
     fi
+
+
+git
+===
+
+
+tmux
+====
+
+
+vim
+===

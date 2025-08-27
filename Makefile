@@ -1,37 +1,42 @@
 # Variables
 
-SOURCE      = src
-HOMEDIR     = $(shell cd && pwd)
-TEMPDIR     = tmp
-INSTALL_CMD = rsync -avP -i --stats "$(SOURCE)/" "$(TARGET)"
+SRCDIR       = src
+HOMEDIR      = ~
+TEMPDIR      = tmp
+UNFOLDS      = .atom .config
+STOWPACKAGES = atom bash git tmux vim
 
--include Makefile.override
+TARGETDIR    = $(HOMEDIR)
+TARGETDIRS   = $(TARGETDIR) $(addprefix $(TARGETDIR)/,$(UNFOLDS))
 
 # Targets
 
-INSTALLS = install install-test
-PREVIEWS = preview preview-test
+.DEFAULT_GOAL = info
 
-.PHONY: clean $(INSTALLS) $(PREVIEWS)
+.PHONY: info clean preview install delete update
+
+$(TARGETDIRS):
+	mkdir -p $@
+
+info:
+	@echo SRCDIR=$(SRCDIR)
+	@echo HOMEDIR=$(HOMEDIR)
+	@echo TEMPDIR=$(TEMPDIR)
+	@echo UNFOLDS=$(UNFOLDS)
+	@echo TARGETDIR=$(TARGETDIR)
+	@echo TARGETDIRS=$(TARGETDIRS)
 
 clean:
 	rm -rf $(TEMPDIR)
 
-install: TARGET = $(HOMEDIR)
-install:
-	$(INSTALL_CMD)
+preview: $(TARGETDIRS)
+	stow -d $(SRCDIR) -t $(TARGETDIR) -v -n $(STOWPACKAGES)
 
-install-test: TARGET = $(TEMPDIR)
-install-test: $(TEMPDIR)
-	$(INSTALL_CMD)
+install: $(TARGETDIRS)
+	stow -d $(SRCDIR) -t $(TARGETDIR) -v $(STOWPACKAGES)
 
-preview: TARGET = $(HOMEDIR)
-preview:
-	$(INSTALL_CMD) --dry-run
+delete: $(TARGETDIRS)
+	stow -d $(SRCDIR) -t $(TARGETDIR) -v --delete $(STOWPACKAGES)
 
-preview-test: TARGET = $(TEMPDIR)
-preview-test: $(TEMPDIR)
-	$(INSTALL_CMD) --dry-run
-
-$(TEMPDIR):
-	mkdir -p $(TEMPDIR)
+update: $(TARGETDIRS)
+	stow -d $(SRCDIR) -t $(TARGETDIR) -v --restow $(STOWPACKAGES)

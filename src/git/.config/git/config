@@ -1,0 +1,36 @@
+[core]
+filemode = false
+
+[diff]
+tool = gvimdiff
+
+[difftool]
+prompt = false
+
+[merge]
+tool = gvimdiff
+
+[url "https://"]
+insteadOf = git://
+
+[log]
+abbrevCommit = true
+
+[format]
+pretty = oneline
+
+[pull]
+rebase = true
+
+[alias]
+br = branch -vva
+graph = log --graph
+gr = log --graph -n10
+pullall = !git pull && git submodule update --init --recursive
+cloneall = "!f() { git clone --recurse-submodules \"$@\"; }; f"
+
+[include]
+path = ~/.gitconfig.local
+
+[fetch]
+pruneTags = true

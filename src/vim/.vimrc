@@ -112,9 +112,17 @@
     autocmd FileChangedShell * let v:fcs_choice = (v:fcs_reason == "mode") ? "" : "ask"
 
     " Color scheme
-    set t_Co=16
+    "set t_Co=16
+    "set background=dark
+    "colorscheme ir_black
+
+    "colorscheme github
+    "colorscheme ir_black
+    "colorscheme zaibatsu
+
     set background=dark
-    colorscheme ir_black
+    colorscheme lunaperche
+
 
     " Map Alt- to the same behavior in vim and gvim
     let c='a'
