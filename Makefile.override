@@ -1,45 +1,33 @@
 # Variables
 
-DOINSTALLPARTIAL_COMMAND = $(MAKE) do-installpart SOURCE=$(SOURCE) TARGET=$(TARGET) RSYNC_OPTIONS=$(RSYNC_OPTIONS)
+STOW_DIR         = src.stow
+STOW_TARGET      = tmp.stow
+STOW_PACKAGES    = atom bash git tmux vim
+STOW_UNFOLD      = $(foreach unfold,$(UNFOLD_DIRS),$(STOW_TARGET)/$(unfold))
+UNFOLD_DIRS      = .atom .config
 
 # Compound targets
 
-INSTALLS += installpart installpart-test
-PREVIEWS += previewpart previewpart-test
 
 # Targets
 
-.PHONY: do-installpart
+.PHONY: info-stow clean-stow preview-stow install-stow
 
-do-installpart:
-	$(RSYNC_COMMAND) "$(SOURCE)/.atom/" "$(TARGET)/.atom" $(RSYNC_OPTIONS)
-	$(RSYNC_COMMAND) "$(SOURCE)/.bash.d/" "$(TARGET)/.bash.d" $(RSYNC_OPTIONS)
-	$(RSYNC_COMMAND) "$(SOURCE)/.vim/" "$(TARGET)/.vim" $(RSYNC_OPTIONS)
-	$(RSYNC_COMMAND) "$(SOURCE)/.vimrc" "$(TARGET)/.vimrc" $(RSYNC_OPTIONS)
-	$(RSYNC_COMMAND) "$(SOURCE)/.gvimrc" "$(TARGET)/.gvimrc" $(RSYNC_OPTIONS)
+$(STOW_TARGET) $(STOW_UNFOLD):
+	mkdir -p $@
 
-## Partial install into homedir
+info-stow:
+	@echo STOW_DIR=$(STOW_DIR)
+	@echo STOW_TARGET=$(STOW_TARGET)
+	@echo STOW_PACKAGES=$(STOW_PACKAGES)
+	@echo STOW_UNFOLD=$(STOW_UNFOLD)
+	@echo UNFOLD_DIRS=$(UNFOLD_DIRS)
 
-installpart: TARGET = $(HOMEDIR)
-installpart: info
-	$(DOINSTALLPARTIAL_COMMAND)
+clean-stow:
+	rm -rf $(STOW_TARGET)
 
-## Partial install into homedir (preview)
+preview-stow: $(STOW_TARGET) $(STOW_UNFOLD)
+	stow -n -v -d $(STOW_DIR) -t $(STOW_TARGET) $(STOW_PACKAGES)
 
-previewpart: TARGET        = $(HOMEDIR)
-previewpart: RSYNC_OPTIONS = --dry-run
-previewpart: info
-	$(DOINSTALLPARTIAL_COMMAND)
-
-## Partial install into tempdir
-
-installpart-test: TARGET = $(TEMPDIR)
-installpart-test: info $(TEMPDIR)
-	$(DOINSTALLPARTIAL_COMMAND)
-
-## Partial install into tempdir (preview)
-
-previewpart-test: TARGET        = $(TEMPDIR)
-previewpart-test: RSYNC_OPTIONS = --dry-run
-previewpart-test: info $(TEMPDIR)
-	$(DOINSTALLPARTIAL_COMMAND)
+install-stow: $(STOW_TARGET) $(STOW_UNFOLD)
+	stow -v -d $(STOW_DIR) -t $(STOW_TARGET) $(STOW_PACKAGES)
