@@ -31,11 +31,12 @@
     telemetryConsent: "limited"
     themes: [
       "one-light-ui"
-      "github-syntax"
+      "duotone-dark-sky-syntax"
     ]
   editor:
-    fontSize: 12
     atomicSoftTabs: false
+    defaultFontSize: 12
+    fontSize: 12
     invisibles: {}
     lineHeight: 1.3
     scrollPastEnd: true

@@ -38,6 +38,7 @@
 
 'body':
   'ctrl-w': 'unset!'
+  'cmd-w': 'unset!'
   'ctrl-w escape': 'core:close'
   'ctrl-w left': 'window:focus-pane-on-left'
   'ctrl-w right': 'window:focus-pane-on-right'
