@@ -1,62 +1,35 @@
 # Variables
 
-SOURCE          = src
-HOMEDIR         = $(shell cd && pwd)
-TEMPDIR         = tmp
-RSYNC_COMMAND   = rsync -avP -i --stats
-RSYNC_OPTIONS   =
-INSTALL_COMMAND = $(RSYNC_COMMAND) "$(SOURCE)/" "$(TARGET)" $(RSYNC_OPTIONS)
+STOW_DIR      = src.stow
+STOW_TARGET   = tmp.stow
+STOW_PACKAGES = atom bash git tmux vim
+UNFOLD_DIRS   = .atom .config
 
 # Compound targets
 
-INSTALLS = install install-test
-PREVIEWS = preview preview-test
-
--include Makefile.override
+TARGET_DIRS = $(STOW_TARGET) $(addprefix $(STOW_TARGET)/,$(UNFOLD_DIRS))
 
 # Targets
 
-.PHONY: clean info $(INSTALLS) $(PREVIEWS)
+.DEFAULT_GOAL = info
 
-clean:
-	rm -rf $(TEMPDIR)
+.PHONY: info clean preview install
+
+$(TARGET_DIRS):
+	mkdir -p $@
 
 info:
-	@echo SOURCE=$(SOURCE)
-	@echo TARGET=$(TARGET)
-	@echo INSTALLS=$(INSTALLS)
-	@echo PREVIEWS=$(PREVIEWS)
-	@echo RSYNC_COMMAND=$(RSYNC_COMMAND)
-	@echo RSYNC_OPTIONS=$(RSYNC_OPTIONS)
-	@echo INSTALL_COMMAND=$(INSTALL_COMMAND)
-	@echo DOINSTALLPARTIAL_COMMAND=$(DOINSTALLPARTIAL_COMMAND)
-	@echo 
+	@echo STOW_DIR=$(STOW_DIR)
+	@echo STOW_TARGET=$(STOW_TARGET)
+	@echo STOW_PACKAGES=$(STOW_PACKAGES)
+	@echo UNFOLD_DIRS=$(UNFOLD_DIRS)
+	@echo TARGET_DIRS=$(TARGET_DIRS)
 
-$(TEMPDIR):
-	mkdir -p $(TEMPDIR)
+clean:
+	rm -rf $(STOW_TARGET)
 
-## Install into homedir
+preview: $(TARGET_DIRS)
+	stow -n -v -d $(STOW_DIR) -t $(STOW_TARGET) $(STOW_PACKAGES)
 
-install: TARGET = $(HOMEDIR)
-install: info
-	$(INSTALL_COMMAND)
-
-## Install into homedir (preview)
-
-preview: TARGET        = $(HOMEDIR)
-preview: RSYNC_OPTIONS = --dry-run
-preview: info
-	$(INSTALL_COMMAND)
-
-## Install into tempdir
-
-install-test: TARGET = $(TEMPDIR)
-install-test: info $(TEMPDIR)
-	$(INSTALL_COMMAND)
-
-## Install into tempdir (preview)
-
-preview-test: TARGET        = $(TEMPDIR)
-preview-test: RSYNC_OPTIONS = --dry-run
-preview-test: info $(TEMPDIR)
-	$(INSTALL_COMMAND)
+install: $(TARGET_DIRS)
+	stow -v -d $(STOW_DIR) -t $(STOW_TARGET) $(STOW_PACKAGES)
