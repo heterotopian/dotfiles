@@ -1,33 +1,33 @@
 # Variables
 
-STOW_DIR         = src.stow
-STOW_TARGET      = tmp.stow
-STOW_PACKAGES    = atom bash git tmux vim
-STOW_UNFOLD      = $(foreach unfold,$(UNFOLD_DIRS),$(STOW_TARGET)/$(unfold))
-UNFOLD_DIRS      = .atom .config
+STOW_DIR      = src.stow
+STOW_TARGET   = tmp.stow
+STOW_PACKAGES = atom bash git tmux vim
+UNFOLD_DIRS   = .atom .config
 
 # Compound targets
 
+TARGET_DIRS = $(STOW_TARGET) $(addprefix $(STOW_TARGET)/,$(UNFOLD_DIRS))
 
 # Targets
 
 .PHONY: info-stow clean-stow preview-stow install-stow
 
-$(STOW_TARGET) $(STOW_UNFOLD):
+$(TARGET_DIRS):
 	mkdir -p $@
 
 info-stow:
 	@echo STOW_DIR=$(STOW_DIR)
 	@echo STOW_TARGET=$(STOW_TARGET)
 	@echo STOW_PACKAGES=$(STOW_PACKAGES)
-	@echo STOW_UNFOLD=$(STOW_UNFOLD)
 	@echo UNFOLD_DIRS=$(UNFOLD_DIRS)
+	@echo TARGET_DIRS=$(TARGET_DIRS)
 
 clean-stow:
 	rm -rf $(STOW_TARGET)
 
-preview-stow: $(STOW_TARGET) $(STOW_UNFOLD)
+preview-stow: $(TARGET_DIRS)
 	stow -n -v -d $(STOW_DIR) -t $(STOW_TARGET) $(STOW_PACKAGES)
 
-install-stow: $(STOW_TARGET) $(STOW_UNFOLD)
+install-stow: $(TARGET_DIRS)
 	stow -v -d $(STOW_DIR) -t $(STOW_TARGET) $(STOW_PACKAGES)
