@@ -126,3 +126,6 @@
 	path = FiraCode
 	url = git@github.com:tonsky/FiraCode
 	ignore = dirty
+[submodule "src/color/macos-terminal-themes"]
+	path = src/color/macos-terminal-themes
+	url = http://github.com/lysyi3m/macos-terminal-themes
