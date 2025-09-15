@@ -4,7 +4,7 @@ SRCDIR       = src
 HOMEDIR      = ~
 TEMPDIR      = tmp
 UNFOLDS      = .atom .config
-STOWPACKAGES = atom bash git tmux vim
+STOWPACKAGES = atom bash color git tmux vim
 
 TARGETDIR    = $(HOMEDIR)
 TARGETDIRS   = $(TARGETDIR) $(addprefix $(TARGETDIR)/,$(UNFOLDS))
