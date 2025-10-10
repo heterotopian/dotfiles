@@ -38,12 +38,18 @@
 
 'body':
   'ctrl-w': 'unset!'
-  'cmd-w': 'unset!'
   'ctrl-w escape': 'core:close'
   'ctrl-w left': 'window:focus-pane-on-left'
   'ctrl-w right': 'window:focus-pane-on-right'
   'ctrl-w up': 'window:focus-pane-above'
   'ctrl-w down': 'window:focus-pane-below'
+
+  'cmd-w': 'unset!'
+  'cmd-w escape': 'core:close'
+  'cmd-w left': 'window:focus-pane-on-left'
+  'cmd-w right': 'window:focus-pane-on-right'
+  'cmd-w up': 'window:focus-pane-above'
+  'cmd-w down': 'window:focus-pane-below'
 
 'atom-text-editor.vim-mode-plus:not(.insert-mode)':
   'alt-h': 'custom:scroll-left-4'
