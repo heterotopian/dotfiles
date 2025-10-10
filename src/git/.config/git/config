@@ -30,7 +30,7 @@ pullall = !git pull && git submodule update --init --recursive
 cloneall = "!f() { git clone --recurse-submodules \"$@\"; }; f"
 
 [include]
-path = ~/.gitconfig.local
+path = ~/.gitconfig-local
 
 [fetch]
 pruneTags = true
