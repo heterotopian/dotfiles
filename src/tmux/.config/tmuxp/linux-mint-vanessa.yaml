@@ -1,0 +1,42 @@
+session_name: '0'
+windows:
+- window_name: "bash"
+  start_directory: "/home/chris"
+  layout: "even-vertical"
+  panes:
+  - shell_command:
+    - btop
+  - focus: true
+
+- window_name: "dotfiles"
+  start_directory: "/home/chris/dotfiles"
+  options:
+    automatic-rename: "off"
+  panes:
+  - blank
+
+- window_name: "technotes"
+  start_directory: "/home/chris/technotes"
+  layout: "even-vertical"
+  options:
+    automatic-rename: "off"
+  shell_command_before:
+    - export PATH="/opt/python3/bin:${PATH}"
+  panes:
+  - shell_command:
+    - make clean watch
+  - focus: true
+
+- window_name: "model-project"
+  start_directory: "/home/chris/model-project"
+  options:
+    automatic-rename: "off"
+  panes:
+  - blank
+
+- window_name: "infrastructure"
+  start_directory: "/home/chris/infrastructure"
+  options:
+    automatic-rename: "off"
+  panes:
+  - blank
