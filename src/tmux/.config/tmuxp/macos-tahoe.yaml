@@ -1,0 +1,21 @@
+session_name: '0'
+windows:
+- window_name: "bash"
+  start_directory: "/Users/chris"
+  layout: "even-vertical"
+  panes:
+  - shell_command:
+    - btop
+  - focus: true
+    shell_command:
+    - bash
+    - clear
+
+- window_name: "dotfiles"
+  start_directory: "/Users/chris/dotfiles"
+  options:
+    automatic-rename: "off"
+  panes:
+  - shell_command:
+    - bash
+    - clear
