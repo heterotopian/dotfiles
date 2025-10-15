@@ -67,12 +67,26 @@ Load fragments from ``.bashrc``::
     fi
 
 
+color
+=====
+
+
 git
 ===
 
 
 tmux
 ====
+
+Configuration for tmux & tmuxp.
+
+Load tmuxp workspace on macOS::
+
+    $ tmuxp load macos-tahoe
+
+Load tmuxp workspace on Linux::
+
+    $ tmuxp load linux-mint-vanessa
 
 
 vim
