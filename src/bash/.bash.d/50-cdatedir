@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# Create a subdirectory named `YYYYMMDD` for today's date, then `cd` into it
+
+cdatedir() {
+    mkdir -p "$(date +%Y%m%d)" && cd "${_}" ; 
+}
